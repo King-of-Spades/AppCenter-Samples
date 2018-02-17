@@ -21,5 +21,8 @@ This sample includes an Android Studio solution with the root folder set to **Ap
 # Xamarin.UITest 
 This sample includes a Xamarin.Forms app project which is compatible with both iOS & Android; as well as a Xamarin.UITest project for the actual tests. It includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/uitest
 
+## Android
+Build status as of most recent commit: [![Build status](https://build.appcenter.ms/v0.1/apps/9411433d-0620-4570-9aa1-8bb72809a4f7/branches/appium/badge)](https://appcenter.ms)
+
 # XCUITest
 This sample includes an XCUITest in an Xcode app set up to run in AppCenter/Test based on the steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xcuitest
