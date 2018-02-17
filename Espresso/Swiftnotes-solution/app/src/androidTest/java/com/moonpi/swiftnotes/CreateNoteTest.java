@@ -12,6 +12,7 @@ import android.view.ViewParent;
 import org.hamcrest.Description;
 import org.hamcrest.Matcher;
 import org.hamcrest.TypeSafeMatcher;
+import org.junit.After;
 import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -30,12 +31,20 @@ import static android.support.test.espresso.matcher.ViewMatchers.withText;
 import static org.hamcrest.Matchers.allOf;
 import static org.hamcrest.Matchers.is;
 
+
+// AppCenter/Test support imports
+import com.microsoft.appcenter.espresso.Factory;
+import com.microsoft.appcenter.espresso.ReportHelper;
+
 @LargeTest
 @RunWith(AndroidJUnit4.class)
 public class CreateNoteTest {
 
     @Rule
     public ActivityTestRule<MainActivity> mActivityTestRule = new ActivityTestRule<>(MainActivity.class);
+
+    @Rule
+    public ReportHelper reportHelper = Factory.getReportHelper();
 
     @Test
     public void createNoteTest() {
@@ -102,6 +111,12 @@ public class CreateNoteTest {
 
     }
 
+    @After
+    public void TearDown(){
+        reportHelper.label("Stopping App");
+    }
+
+
     private static Matcher<View> childAtPosition(
             final Matcher<View> parentMatcher, final int position) {
 
@@ -118,6 +133,10 @@ public class CreateNoteTest {
                 return parent instanceof ViewGroup && parentMatcher.matches(parent)
                         && view.equals(((ViewGroup) parent).getChildAt(position));
             }
+
+
         };
     }
+
+
 }

@@ -34,4 +34,7 @@ dependencies {
     androidTestCompile 'com.android.support.test.espresso:espresso-intents:2.2.2', {
         exclude group: 'com.android.support', module: 'support-annotations'
     }
+    androidTestCompile('com.microsoft.appcenter:espresso-test-extension:1.2')
+
+
 }
