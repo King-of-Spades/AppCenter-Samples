@@ -9,6 +9,12 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITestDemo.Droid", "Droid\U
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UITestDemo.UITest", "UITestDemo.UITest\UITestDemo.UITest.csproj", "{912248EA-0FED-48E1-8994-6C3080551B2C}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "upload scripts", "upload scripts", "{18CBDE2C-B150-4C7E-B99F-B1569ED96CB9}"
+	ProjectSection(SolutionItems) = preProject
+		android.sh = android.sh
+		ios.sh = ios.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|iPhoneSimulator = Debug|iPhoneSimulator
