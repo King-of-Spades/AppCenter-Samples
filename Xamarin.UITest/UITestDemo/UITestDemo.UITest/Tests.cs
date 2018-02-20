@@ -34,9 +34,8 @@ namespace UITestDemo.UITest
         [Test]
         public void ClearTextDemo()
         {
-            //app.Repl();
             app.Tap(x => x.Marked("Add"));
-            app.Tap(x => x.Class("UITextField"));
+            app.Tap(x => x.Marked("Item name"));
 
             app.Screenshot("Before calling ClearText");
             app.ClearText();
