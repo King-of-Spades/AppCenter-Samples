@@ -35,7 +35,7 @@ namespace UITestDemo.UITest
         public void ClearTextDemo()
         {
             app.Tap(x => x.Marked("Add"));
-            app.Tap(x => x.Marked("Item name"));
+            app.Tap(x => x.Text("Item name"));
 
             app.Screenshot("Before calling ClearText");
             app.ClearText();
