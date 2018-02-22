@@ -1,0 +1,37 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "07CB511875DD9A402DEB4FFBA3D5311264B7324C",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "CCC6ED8C09EBC68DE3CBA2381438B745CFC04FDC" : 9223372036854775807,
+    "17AAD681AD6D889543AD5A455EE71B5BF4C71657" : 0,
+    "07CB511875DD9A402DEB4FFBA3D5311264B7324C" : 0
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "B20E2FBD-0DC7-4E4D-9484-B4B1411BE0CE",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "CCC6ED8C09EBC68DE3CBA2381438B745CFC04FDC" : "..\/..",
+    "17AAD681AD6D889543AD5A455EE71B5BF4C71657" : "..",
+    "07CB511875DD9A402DEB4FFBA3D5311264B7324C" : "CleanStore-Solution\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "CleanStore",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "CleanStore.xcodeproj",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:Clean-Swift\/CleanStore.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "07CB511875DD9A402DEB4FFBA3D5311264B7324C"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:john7doe\/alt-framework-training.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "17AAD681AD6D889543AD5A455EE71B5BF4C71657"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:john7doe\/alt-framework-training.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "CCC6ED8C09EBC68DE3CBA2381438B745CFC04FDC"
+    }
+  ]
+}
