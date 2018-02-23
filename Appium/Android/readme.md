@@ -9,7 +9,7 @@ This sample includes an APK file and a pre-written Appium test suite prepared fo
 
 # Uploading to AppCenter/Test
 1. Build the Maven project.
-2. Generate a command line for upload. [Directions](../../#appcentertest-command-line)
+2. Generate a command line for upload. [Directions](../../AppCenter-Test-Samples#appcentertest-command-line)
 3. Run the upload command with project-specific arguments:
    - **OS X** paste your command as the value for 'AppCenter_Test_Command' in 'upload.sh'. In terminal navigate to the Maven folder and run 'sh upload.sh' to generate the 'test/upload' folder and then upload to AppCenter/Test
    - **Windows** The 'tcupload.sh' file is not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
@@ -18,7 +18,7 @@ See Also: [upload.sh](Maven/upload.sh)
 
 # Uploading to Xamarin Test Cloud
 1. Build the Maven project
-2. Generate a command line for upload. [Directions](../../#testcloud-command-line)
+2. Generate a command line for upload. [Directions](../../AppCenter-Test-Samples#testcloud-command-line)
 3. Unzip 'Maven/xtcMac.zip' or 'Maven/xtcWindows.zip' depending on the platform you're using.
 4. Run the upload command with project-specific arguments:
    - **OS X** paste your command as the value for 'TestCloud_Command' in 'tcupload.sh'. In terminal navigate to the Maven folder and run 'sh tcupload.sh' to generate the 'test/upload' folder and then upload to AppCenter/Test.
