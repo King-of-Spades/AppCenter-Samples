@@ -6,7 +6,7 @@ AppCenter_Test_Command='appcenter test run appium --app "kegr/Swiftnotes" --devi
 # Step 2 Provide the (absolute or relative) path to the APK
 app_path='swiftnote.apk'
 
-# Step 3 run using the command "sh android.sh"
+# Step 3 run using the command "sh upload.sh"
 
 # Scripted logic
 # Script injects app_path & build_dir and executes resulting command
