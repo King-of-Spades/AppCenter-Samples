@@ -19,6 +19,7 @@
             <version>4.12</version>
         </dependency>
 
+<!-- Added for AppCenter/Test runs -->
         <dependency>
             <groupId>com.microsoft.appcenter</groupId>
             <artifactId>appium-test-extension</artifactId>
@@ -27,6 +28,8 @@
 
     </dependencies>
 
+
+<!-- Added for AppCenter/Test runs -->
     <repositories>
         <repository>
             <id>jcenter</id>
@@ -74,7 +77,7 @@
             </build>
         </profile>
 
-
+<!-- Added for AppCenter/Test runs -->
         <profile>
             <id>prepare-for-upload</id>
             <build>
