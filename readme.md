@@ -1,28 +1,52 @@
 # AppCenter/Test samples
-These samples are preconstructed to demonstrate how each test framework included can be used along with a demo app in AppCenter/Test.
+These samples are preconstructed to demonstrate how each test framework included can be used along with a demo app in AppCenter/Test. Where practical they are also compatible with Xamarin Test Cloud.
 
 Primary documentation for AppCenter/Test is available here: https://docs.microsoft.com/en-us/appcenter/test-cloud/
 
-The sections below point to specific samples within this repo. The readme also shows prototype command lines for each framework. These command lines must be modified based on specifics of your system & AppCenter/Test account.
+# Upload commands
+No matter which test framework you are using, to run apps in AppCenter/Test or Xamarin Test Cloud, you **must** generate a prototype upload commandline in one of the systems using the wizard. This command line requires modifications in order to be executed, which the test framework-specific upload scripts demonstrate for basic usage. 
 
-# Appium
-## Android
+### AppCenter/Test command line
+1. Log into https://appcenter.ms
+2. If you have not already created your app, do so by selecting **Add new > Add new app** 
+3. Name your app, select the target OS of your app, and the platform your app is written in. 
+4. Select the **Test** icon on the left side of the screen, it is a circle with a checkmark inside of it.
+5. Click **New test run**
+6. Select the devices you wish to run your tests on.
+7. Configure the test framework you are using.
+8. On the submit screen follow the "prerequesites" step if this is your first time creating a run in AppCenter/Test. 
+9. Copy the command from **Running Tests > Upload and schedule tests**. 
+
+##### Example (Your exact command will differ)
+> appcenter test run appium --app "kegr/ReadmeDemo" --devices "kegr/top-4" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir target/upload
+
+### TestCloud command line
+1. Log into https://testcloud.xamarin.com/
+2. Select **New Test Run**
+3. Select a new or existing app for your upload.
+4. Select your devices to test on.
+5. On the last screen, you can choose the testing framework & OS you are uploading your tests from to get the prototype command.
+
+##### Example (Your exact command will differ)
+> xtc test yourAppFile.apk [API_KEY] --devices [DEVICE_HASH] --series "master" --locale "en_US" --user [EMAIL] --workspace target/upload
+
+I have removed the [API_KEY], [DEVICE_HASH] & [EMAIL] values for privacy reasons, however these will automatically be included when you generate the prototype from the wizard in Test Cloud.
+
+# Framework Samples in this Repo
+## Appium
+### Android
 This sample includes an APK file and a pre-written Appium test suite prepared for running in AppCenter/Test. It includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/appium
 
-## iOS
+[Appium Android Sample](Appium/Android)
+
+### iOS (Unfinished)
 We are still working on completing an iOS sample.
 
-# Espresso (Android Only)
+## Espresso (Unfinished)
 This sample includes an Android Studio solution with the root folder set to **AppCenter-Test-Samples/Espresso/Swiftnotes-solution**. It includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/espresso
 
-## Example command line
-> appcenter test run espresso --app [USER/APPNAME] --devices [DEVICE_SET] --app-path pathToFile.apk  --test-series [SERIES] --locale [LOCALE] --build-dir pathToEspressoBuildFolder 
-
-# Xamarin.UITest 
+## Xamarin.UITest (Unfinished)
 This sample includes a Xamarin.Forms app project which is compatible with both iOS & Android; as well as a Xamarin.UITest project for the actual tests. It includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/uitest
 
-## Android
-Build status as of most recent commit: [![Build status](https://build.appcenter.ms/v0.1/apps/9411433d-0620-4570-9aa1-8bb72809a4f7/branches/appium/badge)](https://appcenter.ms)
-
-# XCUITest
+## XCUITest (Unfinished)
 This sample includes an XCUITest in an Xcode app set up to run in AppCenter/Test based on the steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xcuitest
