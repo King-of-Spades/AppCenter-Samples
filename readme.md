@@ -34,11 +34,11 @@ I have removed the [API_KEY], [DEVICE_HASH] & [EMAIL] values for privacy reasons
 
 # Framework Samples in this Repo
 ## Appium
-### Android
-This sample includes an APK file and a pre-written Appium test suite prepared for running in AppCenter/Test. It includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/appium
+These samples include the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/appium
 
-[Appium Android Sample](Appium/Android)
+- [Appium Android Sample](Appium/Android) This sample includes an APK file and a pre-written Appium test suite prepared for running in AppCenter/Test. 
 
+<!--
 ### iOS (Unfinished)
 We are still working on completing an iOS sample.
 
@@ -50,3 +50,5 @@ This sample includes a Xamarin.Forms app project which is compatible with both i
 
 ## XCUITest (Unfinished)
 This sample includes an XCUITest in an Xcode app set up to run in AppCenter/Test based on the steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xcuitest
+
+-->
