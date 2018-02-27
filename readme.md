@@ -8,7 +8,7 @@ No matter which test framework you are using, to run apps in AppCenter/Test or X
 
 ### AppCenter/Test command line
 1. Log into https://appcenter.ms
-2. If you have not already created your app, do so by selecting **Add new > Add new app** 
+2. If you have not already created your app, do so by selecting **Add new > Add new app**. (More info: https://docs.microsoft.com/en-us/appcenter/dashboard/creating-and-managing-apps)
 3. Name your app, select the target OS of your app, and the platform your app is written in. 
 4. Select the **Test** icon on the left side of the screen, it is a circle with a checkmark inside of it.
 5. Click **New test run**
@@ -38,15 +38,19 @@ These samples include the AppCenter/Test specific steps documented here: https:/
 
 - [Appium Android Sample](Appium/Android) This sample includes an APK file and a pre-written Appium test suite prepared for running in AppCenter/Test. 
 
+
+## Xamarin.UITest
+This sample includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/uitest
+
+- [Xamarin.UITest Android & iOS sample](Xamarin.UITest/UITestDemo) This Xamarin.Forms sample app is compatible with both iOS & Android; and includes a Xamarin.UITest project for the actual tests. 
+
+
 <!--
 ### iOS (Unfinished)
 We are still working on completing an iOS sample.
 
 ## Espresso (Unfinished)
 This sample includes an Android Studio solution with the root folder set to **AppCenter-Test-Samples/Espresso/Swiftnotes-solution**. It includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/espresso
-
-## Xamarin.UITest (Unfinished)
-This sample includes a Xamarin.Forms app project which is compatible with both iOS & Android; as well as a Xamarin.UITest project for the actual tests. It includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/uitest
 
 ## XCUITest (Unfinished)
 This sample includes an XCUITest in an Xcode app set up to run in AppCenter/Test based on the steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xcuitest
