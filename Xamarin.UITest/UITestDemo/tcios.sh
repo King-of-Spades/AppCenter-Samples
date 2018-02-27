@@ -10,12 +10,12 @@ app_path='precompiledApps/UITestDemo.ipa'
 build_dir='UITestDemo.UITest/bin/Debug'
 
 # Step 4 Provide the Xamarin.UITest version the project is built with
-uitest='2.3.3'
+uitest='2.2.3'
 
 # Step 5 run using the command "sh tcios.sh"
 
 # Script injects app_path & build_dir and executes resulting command
-TestCloud_Command=${TestCloud_Command/'pathToFile.ipa'/$app_path}
-TestCloud_Command=${TestCloud_Command/'pathToUITestBuildDir'/$build_dir}
+TestCloud_Command=${TestCloud_Command/'yourAppFile.ipa'/$app_path}
+TestCloud_Command=${TestCloud_Command/'pathToTestDllFolder'/$build_dir}
 TestCloud_Command=${TestCloud_Command/'[version]'/$uitest}
 eval $TestCloud_Command
