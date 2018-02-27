@@ -39,7 +39,9 @@ namespace UITestDemo.UITest
 
             app.Screenshot("Before calling ClearText");
             app.ClearText();
-            app.Screenshot("After calling ClearText");
+            app.EnterText("The test worked!");
+            app.Screenshot("Text cleared & replaced");
+            app.Back();
         }
     }
 }

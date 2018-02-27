@@ -27,15 +27,21 @@ namespace UITestDemo.UITest
                     .Android
                     // TODO: Update this path to point to your Android app and uncomment the
                     // code if the app is not included in the solution.
-                    //.ApkFile ("../../../Droid/bin/Debug/xamarinforms.apk")
+                    //.ApkFile ("../../../precompiledApps/com.companyname.UITestDemo.apk")
                     .StartApp();
             }
 
             return ConfigureApp
                 .iOS
                 // TODO: Update this path to point to your iOS app and uncomment the
-                // code if the app is not included in the solution.
-                //.AppBundle ("../../../iOS/bin/iPhoneSimulator/Debug/XamarinForms.iOS.app")
+                // code if the app is not included in the solution. 
+                // The .AppBundle method is only supported for iOS simulators.
+                // .AppBundle ("../../../precompiledApps/UITestDemo.iOS.app")
+                // 
+                // .InstalledApp requires you to build an IPA using the Debug 
+                // configuration & a valid provisioning profile, and preinstalling
+                // it on the target device.
+                // .InstalledApp("com.companyname.UITestDemo")
                 .StartApp();
         }
     }
