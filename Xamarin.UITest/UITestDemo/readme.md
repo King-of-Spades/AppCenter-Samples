@@ -1,3 +1,7 @@
+# Build Status Badges
+- Android App (master branch) - [![Build status](https://build.appcenter.ms/v0.1/apps/9411433d-0620-4570-9aa1-8bb72809a4f7/branches/master/badge)](https://appcenter.ms)
+- iOS App (simulator build) (master branch) - [![Build status](https://build.appcenter.ms/v0.1/apps/0165f989-7687-45c4-8495-fd1f3e22a728/branches/master/badge)](https://appcenter.ms)
+
 # Overview (Xamarin.UITest - Cross-Platform)
 This sample is designed for use in Visual Studio & includes the sourcecode for a Xamarin.Forms app on Android & iOS platforms & a Xamarin.UITest project. It also includes a precompiled APK & IPA incase you want to try only building, running and uploading Xamarin.UITest.
 

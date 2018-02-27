@@ -1,3 +1,8 @@
+# Build status
+[![Build status](https://build.appcenter.ms/v0.1/apps/07cf2b4b-3731-4013-90e5-7d790816a968/branches/master/badge)](https://appcenter.ms)
+
+
+
 # Swiftnotes
 
 This project is no longer maintained.
