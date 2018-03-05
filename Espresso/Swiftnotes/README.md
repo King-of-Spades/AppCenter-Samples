@@ -1,17 +1,7 @@
 # Build status
 [![Build status](https://build.appcenter.ms/v0.1/apps/07cf2b4b-3731-4013-90e5-7d790816a968/branches/master/badge)](https://appcenter.ms)
 
-
-
-# Swiftnotes
-
-This project is no longer maintained.
-
-[Swiftnotes](https://play.google.com/store/apps/details?id=com.moonpi.swiftnotes) is a note taking app that takes simplicity and speed to a whole new level. 
-
-It offers you a quick and easy way to stay organised, capture your thoughts, reminders or anything that's on your mind, any time, anywhere. No extra unnecessary features, just notes. For screenshots and more information visit the [Google PlayStore.](https://play.google.com/store/apps/details?id=com.moonpi.swiftnotes)
-
-### Build
+# Build
 
 Steps on how to build Swiftnotes:
 - Make sure you have the latest version of Android Studio with Gradle v2.3.1 and the required Android SDK Tools installed (25.0.3 Build tools)
@@ -22,7 +12,7 @@ Steps on how to build Swiftnotes:
 - Build -> Rebuild Project and Sync Gradle
 - Good to go!
 
-### License
+# License for Swiftnotes sample app
 
 Copyright &copy; 2017 Adrian Chifor
 
