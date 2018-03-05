@@ -25,3 +25,16 @@ See Also: [upload.sh](Maven/upload.sh)
    - **Windows** The 'tcupload.sh' file is not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
    
 See Also: [tcupload.sh](Maven/tcupload.sh)
+
+
+# About Swiftnotes Sample App
+Within this repo, the sourcecode for this app can be found in the [Espresso/Swiftnotes](../../espresso/swiftnotes) folder.
+
+## License
+Copyright &copy; 2017 Adrian Chifor
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use this file except in compliance with the License. You may obtain a copy of the License at
+
+http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software distributed under the License is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the License for the specific language governing permissions and limitations under the License.
