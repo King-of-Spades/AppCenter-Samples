@@ -1,0 +1,255 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProjectGuid>{E48AC262-7349-4E73-8F99-CE459BCFE7B3}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>XTCiOSSampleProject</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>XTCiOSSampleProject</AssemblyName>
+    <UseMSBuildEngine>True</UseMSBuildEngine>
+    <TargetFrameworkIdentifier>Xamarin.iOS</TargetFrameworkIdentifier>
+    <TargetFrameworkVersion>v1.0</TargetFrameworkVersion>
+    <MtouchSdkVersion>11.2</MtouchSdkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>__UNIFIED__;DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <MtouchArch>x86_64</MtouchArch>
+    <CodesignKey>iPhone Developer: Karl Krukow (YTTN6Y2QS9)</CodesignKey>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>BeforeBuild</type>
+          <command>rm -rf *.app*; rm -f *.dll; rm -f *.ipa; rm -f *.exe</command>
+          <workingdir>${ProjectDir}/bin/iPhoneSimulator/Debug</workingdir>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>ditto -ck --rsrc --sequesterRsrc --keepParent XTCiOSSampleProject.app XTCiOSSample-sim.app.zip</command>
+          <workingdir>${ProjectDir}/bin/iPhoneSimulator/Debug</workingdir>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <DefineConstants>__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignKey>iPhone Developer: Karl Krukow (YTTN6Y2QS9)</CodesignKey>
+    <MtouchArch>x86_64</MtouchArch>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>__UNIFIED__;DEBUG;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <ConsolePause>false</ConsolePause>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <IpaPackageName></IpaPackageName>
+    <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
+    <BuildIpa>true</BuildIpa>
+    <CustomCommands>
+      <CustomCommands>
+        <Command>
+          <type>BeforeBuild</type>
+          <command>rm -rf *.app*; rm -f *.dll; rm -f *.ipa; rm -f *.exe</command>
+          <workingdir>${ProjectDir}/bin/iPhone/Debug</workingdir>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>ditto -ck --rsrc --sequesterRsrc --keepParent XTCiOSSampleProject.app XTCiOSSample-device.app.zip</command>
+          <workingdir>${ProjectDir}/bin/iPhone/Debug</workingdir>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp XTCiOSSampleProject.ipa XTCiOSSample-device.ipa</command>
+          <workingdir>${ProjectDir}/bin/iPhone/Debug</workingdir>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp -r  XTCiOSSampleProject.app.dSYM XTCiOSSample-device.app.dSYM</command>
+          <workingdir>${ProjectDir}/bin/iPhone/Debug</workingdir>
+        </Command>
+        <Command>
+          <type>AfterBuild</type>
+          <command>cp bin/iPhone/Debug/XTCiOSSampleProject.ipa  ${ProjectDir}/../test-app/XTCiOSSample.ipa</command>
+          <workingdir></workingdir>
+        </Command>
+      </CustomCommands>
+    </CustomCommands>
+    <DeviceSpecificBuild>false</DeviceSpecificBuild>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <DefineConstants>__UNIFIED__;__MOBILE__;__IOS__;</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <ConsolePause>false</ConsolePause>
+    <CodesignKey>iPhone Developer: Karl Krukow (PLLU6J99S9)</CodesignKey>
+    <IpaPackageName></IpaPackageName>
+    <MtouchI18n></MtouchI18n>
+    <MtouchArch>ARM64</MtouchArch>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Content\web_view.html">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </BundleResource>
+    <None Include="Info.plist" />
+    <BundleResource Include="Resources\Icon.png" />
+    <BundleResource Include="Resources\Icon%402x.png" />
+    <BundleResource Include="Resources\Icon-60%402x.png" />
+    <BundleResource Include="Resources\Icon-72.png" />
+    <BundleResource Include="Resources\Icon-72%402x.png" />
+    <BundleResource Include="Resources\Icon-76.png" />
+    <BundleResource Include="Resources\Icon-76%402x.png" />
+    <BundleResource Include="Resources\Icon-Small.png" />
+    <BundleResource Include="Resources\Icon-Small%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-50.png" />
+    <BundleResource Include="Resources\Icon-Small-50%402x.png" />
+    <BundleResource Include="Resources\Icon-Small-40.png" />
+    <BundleResource Include="Resources\Icon-Small-40%402x.png" />
+    <BundleResource Include="Resources\Default.png" />
+    <BundleResource Include="Resources\Default%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait%402x.png" />
+    <BundleResource Include="Resources\Default-Landscape%402x.png" />
+    <BundleResource Include="Resources\Default-568h%402x.png" />
+    <BundleResource Include="Resources\Default-Portrait.png" />
+    <BundleResource Include="Resources\Default-Landscape.png" />
+    <BundleResource Include="Content\swipe_page.html">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </BundleResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <Compile Include="Screens\WebViewSampleController.cs" />
+    <Compile Include="Screens\WebViewSampleController.designer.cs">
+      <DependentUpon>WebViewSampleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ScrollSampleController.cs" />
+    <Compile Include="Screens\ScrollSampleController.designer.cs">
+      <DependentUpon>ScrollSampleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\RootViewController.cs" />
+    <Compile Include="Screens\RootViewController.designer.cs">
+      <DependentUpon>RootViewController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DirectionalSwipeSampleController.cs" />
+    <Compile Include="Screens\DirectionalSwipeSampleController.designer.cs">
+      <DependentUpon>DirectionalSwipeSampleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\DatePickerSampleController.cs" />
+    <Compile Include="Screens\DatePickerSampleController.designer.cs">
+      <DependentUpon>DatePickerSampleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
+    <Compile Include="Screens\ViewsSampleController.cs" />
+    <Compile Include="Screens\ViewsSampleController.designer.cs">
+      <DependentUpon>ViewsSampleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\ViewDataSampleController.cs" />
+    <Compile Include="Screens\ViewDataSampleController.designer.cs">
+      <DependentUpon>ViewDataSampleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Orientations\LandscapeOrientationController.cs" />
+    <Compile Include="Screens\Orientations\LandscapeOrientationController.designer.cs">
+      <DependentUpon>LandscapeOrientationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Orientations\LandscapeUpsideDownController.cs" />
+    <Compile Include="Screens\Orientations\LandscapeUpsideDownController.designer.cs">
+      <DependentUpon>LandscapeUpsideDownController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Orientations\PortraitOrientationController.cs" />
+    <Compile Include="Screens\Orientations\PortraitOrientationController.designer.cs">
+      <DependentUpon>PortraitOrientationController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Orientations\PortraitUpsideDownController.cs" />
+    <Compile Include="Screens\Orientations\PortraitUpsideDownController.designer.cs">
+      <DependentUpon>PortraitUpsideDownController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\Orientations\OrientationsSampleController.cs" />
+    <Compile Include="Screens\Orientations\OrientationsSampleController.designer.cs">
+      <DependentUpon>OrientationsSampleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\TapSampleController.cs" />
+    <Compile Include="Screens\TapSampleController.designer.cs">
+      <DependentUpon>TapSampleController.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Screens\LocationSampleController.cs" />
+    <Compile Include="Screens\LocationSampleController.designer.cs" />
+    <Compile Include="Screens\NestedLabelTableViewCell.cs" />
+    <Compile Include="Screens\WebViewSwipeSampleController.cs" />
+    <Compile Include="Screens\WebViewSwipeSampleController.designer.cs">
+      <DependentUpon>WebViewSwipeSampleController.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <InterfaceDefinition Include="Screens\RootViewController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\RootViewController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\WebViewSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\WebViewSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\DatePickerSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\DatePickerSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\ScrollSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\ScrollSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\DirectionalSwipeSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\DirectionalSwipeSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\ViewDataSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\ViewDataSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\ViewsSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\ViewsSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\OrientationsSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\OrientationsSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\LandscapeOrientationController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\LandscapeOrientationController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\LandscapeUpsideDownController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\LandscapeUpsideDownController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\PortraitOrientationController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\PortraitOrientationController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\PortraitUpsideDownController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\Orientations\PortraitUpsideDownController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\LaunchScreen.xib" />
+    <InterfaceDefinition Include="Screens\TapSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\TapSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\LocationSampleController~ipad.xib" />
+    <InterfaceDefinition Include="Screens\LocationSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\WebViewSwipeSampleController~iphone.xib" />
+    <InterfaceDefinition Include="Screens\WebViewSwipeSampleController~ipad.xib" />
+  </ItemGroup>
+  <ItemGroup>
+    <ITunesArtwork Include="iTunesArtwork" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+</Project>

@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment version="2048" identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DirectionalSwipeSampleController">
+            <connections>
+                <outlet property="downSwipeGestureRecognizer" destination="8Sr-it-zpb" id="a7a-sm-gan"/>
+                <outlet property="label" destination="zhn-g5-R1P" id="3TC-Av-lmt"/>
+                <outlet property="leftSwipeGestureRecognizer" destination="C7r-9a-zAS" id="Dei-GW-aBb"/>
+                <outlet property="rightSwipeGestureRecognizer" destination="4wo-9q-6s5" id="8PE-jq-5Yb"/>
+                <outlet property="upSwipeGestureRecognizer" destination="AgD-1P-7HQ" id="ZGe-A1-exT"/>
+                <outlet property="view" destination="dfj-yt-Wj8" id="9ba-iR-QZ3"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="dfj-yt-Wj8">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Swipe Away!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zhn-g5-R1P">
+                    <rect key="frame" x="20" y="107" width="280" height="21"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <accessibility key="accessibilityConfiguration" label="textViewHeader"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <gestureRecognizers/>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outletCollection property="gestureRecognizers" destination="C7r-9a-zAS" appends="YES" id="ci6-IX-9Bb"/>
+                <outletCollection property="gestureRecognizers" destination="AgD-1P-7HQ" appends="YES" id="l16-yy-bca"/>
+                <outletCollection property="gestureRecognizers" destination="4wo-9q-6s5" appends="YES" id="JsD-qC-tcN"/>
+                <outletCollection property="gestureRecognizers" destination="8Sr-it-zpb" appends="YES" id="TgE-24-NOm"/>
+            </connections>
+        </view>
+        <swipeGestureRecognizer direction="left" id="C7r-9a-zAS" userLabel="Left Gesture Recognizer"/>
+        <swipeGestureRecognizer direction="up" id="AgD-1P-7HQ" userLabel="Up Gesture Recognizer"/>
+        <swipeGestureRecognizer direction="right" id="4wo-9q-6s5" userLabel="Right Gesture Recognizer"/>
+        <swipeGestureRecognizer direction="down" id="8Sr-it-zpb" userLabel="Down Gesture Recognizer"/>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4_7.fullscreen"/>
+    </simulatedMetricsContainer>
+</document>
