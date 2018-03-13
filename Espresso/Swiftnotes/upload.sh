@@ -10,5 +10,5 @@ build_dir='app/build/outputs/apk/androidTest/debug'
 # Script injects set values
 AppCenter_Test_Command=${AppCenter_Test_Command/'pathToFile.apk'/$apk_path}
 AppCenter_Test_Command=${AppCenter_Test_Command/'pathToEspressoBuildFolder'/$build_dir}
-echo $AppCenter_Test_Command # For debugging only, prints the final command that will be submitted by eval
+echo $AppCenter_Test_Command 
 eval $AppCenter_Test_Command

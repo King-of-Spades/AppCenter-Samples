@@ -1,16 +1,40 @@
 # Build status
 [![Build status](https://build.appcenter.ms/v0.1/apps/07cf2b4b-3731-4013-90e5-7d790816a968/branches/master/badge)](https://appcenter.ms)
 
-# Build
-
+# Building & running tests locally
+## Building
 Steps on how to build Swiftnotes:
-- Make sure you have the latest version of Android Studio with Gradle v2.3.1 and the required Android SDK Tools installed (25.0.3 Build tools)
-- Clone this repository
-- Open Android Studio -> File -> Import Project
-- Select build.gradle in Swiftnotes
-- Go to Project Structure and make sure Android SDK and JDK paths are set
-- Build -> Rebuild Project and Sync Gradle
-- Good to go!
+1. Make sure you have the latest version of Android Studio with Gradle v4.1 and the required Android SDK Tools installed (26.1.1 Build tools)
+2. Open the project using *Android Studio > File > Import Project*
+3. Select *build.gradle* in Swiftnotes. (Picking another directory may still seem to open the project, but cause trouble building.)
+4. Go to *File > Project Structure > SDK Location* and make sure Android SDK and JDK paths are set.
+5. Select *Build > Rebuild Project*
+
+## Running tests
+To run tests locally:
+1. Make sure you can build the app (see above)
+2. Navigate in Android Studio to *app > java > com.moonpi.swifnotes (androidTest) > CreateNoteTest*
+3. Right-click *CreateNoteTest* and select *Run 'CreateNoteTest'*
+4. Select a device or emulator from the dialog to install the app and run the tests. 
+
+# Uploading app & tests
+## Uploading to App Center Test
+1. Build the app & tests locally. (Running locally is optional but a good idea)
+2. Generate a command line for upload. [Directions](/../../#appcentertest-command-line)
+3. Run the upload command with project-specific arguments:
+   - **OS X** paste your command as the value for 'AppCenter_Test_Command' in 'upload.sh'. In terminal navigate to the Maven folder and run 'sh upload.sh' to upload to AppCenter/Test
+   - **Windows** The 'upload.sh' file is not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
+See Also: [upload.sh](upload.sh)
+
+## Uploading to Test Cloud
+1. Build the app & tests locally. (Running locally is optional but a good idea)
+2. Generate a command line for upload. [Directions](/../../#testcloud-command-line)
+3. Unzip 'xtcMac.zip' or 'xtcWindows.zip' depending on the platform you're using.
+4. Run the upload command with project-specific arguments:
+   - **OS X** paste your command as the value for 'TestCloud_Command' in 'tcupload.sh', and remove the directory value for '--workspace'. In terminal run 'sh tcupload.sh' to upload to AppCenter/Test.
+   - **Windows** The 'tcupload.sh' file is not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
+   
+See Also: [tcupload.sh](tcupload.sh)
 
 # License for Swiftnotes sample app
 

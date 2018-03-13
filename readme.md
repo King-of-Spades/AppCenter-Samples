@@ -45,12 +45,14 @@ This sample includes the AppCenter/Test specific steps documented here: https://
 - [Xamarin.UITest Android & iOS sample](Xamarin.UITest/UITestDemo) This Xamarin.Forms sample app is compatible with both iOS & Android; and includes a Xamarin.UITest project for the actual tests. 
 
 
+## Espresso
+This sample includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/espresso
+
+
+
 <!--
 ### iOS (Unfinished)
 We are still working on completing an iOS sample.
-
-## Espresso (Unfinished)
-This sample includes an Android Studio solution with the root folder set to **AppCenter-Test-Samples/Espresso/Swiftnotes-solution**. It includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/espresso
 
 ## XCUITest (Unfinished)
 This sample includes an XCUITest in an Xcode app set up to run in AppCenter/Test based on the steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xcuitest

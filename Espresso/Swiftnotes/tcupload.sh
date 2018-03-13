@@ -13,5 +13,5 @@ platform='xtcMac/xtc'
 TestCloud_Command=${TestCloud_Command/'--workspace'/$workspace}
 TestCloud_Command=${TestCloud_Command/'yourAppFile.apk'/$apk_path}
 TestCloud_Command=${TestCloud_Command/'xtc'/$platform}
-echo $TestCloud_Command # For debugging only, prints the final command that will be submitted by eval
+echo $TestCloud_Command
 eval $TestCloud_Command
