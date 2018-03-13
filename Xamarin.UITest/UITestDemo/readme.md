@@ -1,5 +1,5 @@
 # Build Status Badges
-- Android App (master branch) - [![Build status](https://build.appcenter.ms/v0.1/apps/9411433d-0620-4570-9aa1-8bb72809a4f7/branches/master/badge)](https://appcenter.ms)
+- Android App (master branch) - [![Build status](https://build.appcenter.ms/v0.1/apps/57b5058a-3e1e-4b58-b81c-8375119955cc/branches/master/badge)](https://appcenter.ms)
 - iOS App (simulator build) (master branch) - [![Build status](https://build.appcenter.ms/v0.1/apps/0165f989-7687-45c4-8495-fd1f3e22a728/branches/master/badge)](https://appcenter.ms)
 
 # Overview (Xamarin.UITest - Cross-Platform)
