@@ -3,7 +3,7 @@ TestCloud_Command='paste command here'
 app_path='../swiftnote.apk'
 platform='xtcMac/xtc'
 
-# Run using the command "sh upload.sh"
+# Run using the command "sh tcupload.sh"
 Build_Upload_Command='mvn -DskipTests -P prepare-for-upload package'
 eval $Build_Upload_Command
 
