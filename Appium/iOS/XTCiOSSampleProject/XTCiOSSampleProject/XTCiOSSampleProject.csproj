@@ -70,35 +70,6 @@
     <IpaPackageName></IpaPackageName>
     <MtouchArch>ARMv7, ARMv7s, ARM64</MtouchArch>
     <BuildIpa>true</BuildIpa>
-    <CustomCommands>
-      <CustomCommands>
-        <Command>
-          <type>BeforeBuild</type>
-          <command>rm -rf *.app*; rm -f *.dll; rm -f *.ipa; rm -f *.exe</command>
-          <workingdir>${ProjectDir}/bin/iPhone/Debug</workingdir>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>ditto -ck --rsrc --sequesterRsrc --keepParent XTCiOSSampleProject.app XTCiOSSample-device.app.zip</command>
-          <workingdir>${ProjectDir}/bin/iPhone/Debug</workingdir>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp XTCiOSSampleProject.ipa XTCiOSSample-device.ipa</command>
-          <workingdir>${ProjectDir}/bin/iPhone/Debug</workingdir>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp -r  XTCiOSSampleProject.app.dSYM XTCiOSSample-device.app.dSYM</command>
-          <workingdir>${ProjectDir}/bin/iPhone/Debug</workingdir>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>cp bin/iPhone/Debug/XTCiOSSampleProject.ipa  ${ProjectDir}/../test-app/XTCiOSSample.ipa</command>
-          <workingdir></workingdir>
-        </Command>
-      </CustomCommands>
-    </CustomCommands>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
