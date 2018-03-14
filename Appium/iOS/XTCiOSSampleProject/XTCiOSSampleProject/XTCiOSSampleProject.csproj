@@ -24,22 +24,8 @@
     <ConsolePause>false</ConsolePause>
     <MtouchLink>None</MtouchLink>
     <MtouchDebug>true</MtouchDebug>
-    <MtouchArch>x86_64</MtouchArch>
+    <MtouchArch>i386, x86_64</MtouchArch>
     <CodesignKey>iPhone Developer: Karl Krukow (YTTN6Y2QS9)</CodesignKey>
-    <CustomCommands>
-      <CustomCommands>
-        <Command>
-          <type>BeforeBuild</type>
-          <command>rm -rf *.app*; rm -f *.dll; rm -f *.ipa; rm -f *.exe</command>
-          <workingdir>${ProjectDir}/bin/iPhoneSimulator/Debug</workingdir>
-        </Command>
-        <Command>
-          <type>AfterBuild</type>
-          <command>ditto -ck --rsrc --sequesterRsrc --keepParent XTCiOSSampleProject.app XTCiOSSample-sim.app.zip</command>
-          <workingdir>${ProjectDir}/bin/iPhoneSimulator/Debug</workingdir>
-        </Command>
-      </CustomCommands>
-    </CustomCommands>
     <DeviceSpecificBuild>false</DeviceSpecificBuild>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
