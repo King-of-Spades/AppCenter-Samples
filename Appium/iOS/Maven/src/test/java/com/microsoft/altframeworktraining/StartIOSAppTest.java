@@ -15,9 +15,6 @@ import org.openqa.selenium.remote.DesiredCapabilities;
 import java.net.MalformedURLException;
 import java.net.URL;
 
-/**
- * Created by krukow on 05/02/2018.
- */
 public class StartIOSAppTest {
     private EnhancedIOSDriver<IOSElement> driver;
     @Rule
@@ -28,36 +25,33 @@ public class StartIOSAppTest {
 
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ios");
 
-        // carthage
-        /*
-                sudo mkdir /usr/local/Frameworks
-                sudo chown -R $(whoami) /usr/local/Frameworks
-                brew install carthage
-
-         */
+        // This needs to go in the readme or be deleted outright
         // npm install -g ios-deploy
-        // expected: libimobile
-
-        //change this Note: I'm using an .ipa + physical device, see:
         // http://appium.io/docs/en/drivers/ios-xcuitest-real-devices/
         // http://appium.io/docs/en/drivers/ios-xcuitest/index.html
-        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "9a273f502194583335a0fa4fae089c4e9bb0bd98");
-        capabilities.setCapability(MobileCapabilityType.UDID, "9a273f502194583335a0fa4fae089c4e9bb0bd98");
 
-        //change this Note: to resign and install the web driver agent
-        //capabilities.setCapability("xcodeOrgId", "<Team ID>");
-        //capabilities.setCapability("xcodeSigningId", "iPhone Developer");
-        capabilities.setCapability("xcodeOrgId", "H2H58GY7CF");
-        capabilities.setCapability("xcodeSigningId", "iPhone Developer");
+        // uncomment for running locally
+        // 1. Run 'xcrun instruments -s devices' in terminal
+        // 2. Paste the device or simulator ID you need to replace <Device ID> below
+        // capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "<Device ID>");
+        // capabilities.setCapability(MobileCapabilityType.UDID, "<Device ID>");
+
+        // 3. (Local device only) Set your Team ID for your signing identity and uncomment below
+        // capabilities.setCapability("xcodeOrgId", "<Team ID>");
+        // capabilities.setCapability("xcodeSigningId", "iPhone Developer");
         capabilities.setCapability("showXcodeLog", true);
 
-        //change this
-        // also make sure you run rake binaries:fetch_sample_apps from that project
-        // I recommend resigning the app and installing it on the device up front
-        String appPath = "/Users/krukow/code/test-cloud-test-apps/XTCiOSSampleProject/test-app/XTCiOSSample.ipa";
+//        4. Uncomment the lines for either the (local) iOS simulator or (local) iOS device below
+//        (Simulator)
+//        String appPath = "/Users/kentgreen/Projects/AppCenter-Test-Samples/Appium/iOS/UITestDemo.iOS.app";
+//        capabilities.setCapability(MobileCapabilityType.APP, appPath);
 
-        //capabilities.setCapability(MobileCapabilityType.APP, appPath);
-        capabilities.setCapability("bundleId","com.xamarin.XTCiOSSampleProject");
+//        (Device)
+//        String ipaPath = "/Users/kentgreen/Projects/AppCenter-Test-Samples/Appium/iOS/UITestDemo.ipa";
+//        capabilities.setCapability(MobileCapabilityType.APP, ipaPath);
+
+
+        capabilities.setCapability("bundleId","com.companyname.UITestDemo");
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "XCUITest");
 
         URL url = new URL("http://localhost:4723/wd/hub");
@@ -69,11 +63,11 @@ public class StartIOSAppTest {
     @Test
     public void canStartAppInTest() throws MalformedURLException, InterruptedException {
         driver = startApp();
-        IOSElement elem =  driver.findElement(By.name("Date Picker"));
         driver.label("App Launched");
+        IOSElement elem =  driver.findElement(By.name("Add"));
         elem.click();
         Thread.sleep(5000);
-        driver.label("tapped Date Picker");
+        driver.label("tapped Add button");
     }
 
     @After
