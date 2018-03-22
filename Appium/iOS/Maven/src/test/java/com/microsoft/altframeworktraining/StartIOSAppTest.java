@@ -25,24 +25,19 @@ public class StartIOSAppTest {
 
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "ios");
 
-        // This needs to go in the readme or be deleted outright
-        // npm install -g ios-deploy
-        // http://appium.io/docs/en/drivers/ios-xcuitest-real-devices/
-        // http://appium.io/docs/en/drivers/ios-xcuitest/index.html
+//        Commented Out lines below are only used for running local tests, not in App Center where they will be ignored
+//        1. Run 'xcrun instruments -s devices' in terminal
+//        2. Uncomment & paste the device or simulator ID you need to replace <Device ID> below
+//        capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "<Device ID>");
+//        capabilities.setCapability(MobileCapabilityType.UDID, "<Device ID>");
+//
+//        3. (Use only when running on a local device) Set your Team ID for your signing identity and uncomment below
+//        capabilities.setCapability("xcodeOrgId", "<Team ID>");
+//        capabilities.setCapability("xcodeSigningId", "iPhone Developer");
+//        capabilities.setCapability("showXcodeLog", true);
 
-        // uncomment for running locally
-        // 1. Run 'xcrun instruments -s devices' in terminal
-        // 2. Paste the device or simulator ID you need to replace <Device ID> below
-        // capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "<Device ID>");
-        // capabilities.setCapability(MobileCapabilityType.UDID, "<Device ID>");
-
-        // 3. (Local device only) Set your Team ID for your signing identity and uncomment below
-        // capabilities.setCapability("xcodeOrgId", "<Team ID>");
-        // capabilities.setCapability("xcodeSigningId", "iPhone Developer");
-        capabilities.setCapability("showXcodeLog", true);
-
-//        4. Uncomment the lines for either the (local) iOS simulator or (local) iOS device below
-//        (Simulator)
+//        4. Uncomment the lines for either the iOS simulator or iOS device below
+//        (Simulator) *Make sure to unzip the included file
 //        String appPath = "/Users/kentgreen/Projects/AppCenter-Test-Samples/Appium/iOS/UITestDemo.iOS.app";
 //        capabilities.setCapability(MobileCapabilityType.APP, appPath);
 
