@@ -1,11 +1,30 @@
 # Overview (Appium-Android)
 This sample includes an APK file and a pre-written Appium test suite prepared for running in AppCenter/Test or testcloud.xamarin.com. Please see this document for information on preparing an existing Appium test suite for running in AppCenter: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/appium
 
-# Building & running locally
-1. Build the Maven project using your perferred method. Your IDE may prompt you to auto-apply some settings, in which case confirm them. 
-2. If you wish to run the tests locally on a device or emulator, make sure to start the local Appium server before running tests, otherwise the tests will fail. 
+# Installation
+If you haven't previously set up Appium, you can do so by following these steps:
 
+1. Install `Node.js/NPM`: https://www.npmjs.com/get-npm
+2. Install Appium:
+   - **Windows** This guide shows how to install Appium on Windows: https://www.edgewordstraining.co.uk/2017/07/05/install-appium-server-windows/
+
+   - **OSX** Use this command in the Terminal (This may require additional permission arguments to work: https://github.com/npm/npm/issues/17268): 
+   > `sudo npm install -g appium`
+
+3. Install Maven:
+https://maven.apache.org/install.html
+
+4. Set the ANDROID_HOME path enviroment variable. https://stackoverflow.com/questions/28296237/set-android-home-environment-variable-in-mac
+
+By default typically the Android SDK is located at `~/Library/Android/sdk` (Mac) or `%LOCALAPPDATA%\Android\sdk` (Windows)
+ 
+
+# Building & running locally
 (Note: The author of this sample used IntelliJ IDEA 2017.3.4 (Ultimate Edition) on Mac OS X 10.13.3, though other tools for building may work.)
+
+1. Provide the absolute path to swiftnote.apk here: [Maven/src/test/java/com/microsoft/altframeworktraining/StartAppTest.java#L33](Maven/src/test/java/com/microsoft/altframeworktraining/StartAppTest.java#L33) 
+2. Build the Maven project using your perferred method. Your IDE may prompt you to auto-apply some settings, in which case confirm them. 
+3. Make sure to start the local Appium server before running tests, otherwise the tests will fail. 
 
 # Uploading app & tests
 ## Uploading to AppCenter/Test
