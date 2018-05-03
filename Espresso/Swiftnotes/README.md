@@ -18,23 +18,12 @@ To run tests locally:
 4. Select a device or emulator from the dialog to install the app and run the tests. 
 
 # Uploading app & tests
-## Uploading to App Center Test
 1. Build the app & tests locally. (Running locally is optional but a good idea)
-2. Generate a command line for upload. [Directions](/../../#appcentertest-command-line)
+2. Generate a command line for upload. [Directions](/../../#upload-commands)
 3. Run the upload command with project-specific arguments:
    - **OS X** paste your command as the value for 'AppCenter_Test_Command' in 'upload.sh'. In terminal navigate to the Maven folder and run 'sh upload.sh' to upload to AppCenter/Test
    - **Windows** The 'upload.sh' file is not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
 See Also: [upload.sh](upload.sh)
-
-## Uploading to Test Cloud
-1. Build the app & tests locally. (Running locally is optional but a good idea)
-2. Generate a command line for upload. [Directions](/../../#testcloud-command-line)
-3. Unzip 'xtcMac.zip' or 'xtcWindows.zip' depending on the platform you're using.
-4. Run the upload command with project-specific arguments:
-   - **OS X** paste your command as the value for 'TestCloud_Command' in 'tcupload.sh', and remove the directory value for '--workspace'. In terminal run 'sh tcupload.sh' to upload to AppCenter/Test.
-   - **Windows** The 'tcupload.sh' file is not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
-   
-See Also: [tcupload.sh](tcupload.sh)
 
 # License for Swiftnotes sample app
 

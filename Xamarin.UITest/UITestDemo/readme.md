@@ -30,9 +30,9 @@ You can run the UITest project locally without building the app projects by usin
 
 3. Run the Xamarin.UITests using the steps in this guide: [Testing on devices](https://developer.xamarin.com/guides/testcloud/uitest/working-with/testing-on-devices/)
 
-# Uploading to AppCenter/Test
+# Uploading tests
 1. Build the Xamarin.UITest project.
-2. Generate a command line for upload [Directions for AppCenter/Test](/../../#appcentertest-command-line)
+2. Generate a command line for upload: [Directions](/../../#upload-commands)
 3. Update the upload command with project-specific arguments:
    - **OS X** paste your command as the value for 'AppCenter_Test_Command' in 'android.sh' or 'ios.sh' depending on the platform. You can run these files using 'sh android.sh' or 'sh ios.sh'.
    - **Windows** The '.sh' files are not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
@@ -40,15 +40,3 @@ You can run the UITest project locally without building the app projects by usin
 #### See Also   
 - Android upload script: [android.sh](android.sh)
 - iOS upload script: [ios.sh](ios.sh)
-
-
-# Uploading to Xamarin Test Cloud
-1. Build the Xamarin.UITest project.
-2. Generate a command line for upload [Directions for AppCenter/Test](/../../#testcloud-command-line)
-3. Update the upload command with project-specific arguments:
-   - **OS X** paste your command as the value for 'TestCloud_Command' in 'tcandroid.sh' or 'tcios.sh' depending on the platform. You can run these files using 'sh tcandroid.sh' or 'sh tcios.sh'.
-   - **Windows** The '.sh' files are not technically compatible with Windows, however it shows how to modify the generated command to upload this sample manually.
-
-#### See Also   
-- Android upload script: [tcandroid.sh](tcandroid.sh)
-- iOS upload script: [tcios.sh](tcios.sh)
