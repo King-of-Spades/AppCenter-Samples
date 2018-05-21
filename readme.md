@@ -6,7 +6,6 @@ Primary documentation for AppCenter/Test is available here: https://docs.microso
 # Upload commands
 No matter which test framework you are using, to run apps in AppCenter/Test or Xamarin Test Cloud, you **must** generate a prototype upload commandline in one of the systems using the wizard. This command line requires modifications in order to be executed, which the test framework-specific upload scripts demonstrate for basic usage. 
 
-### AppCenter/Test command line
 1. Log into https://appcenter.ms
 2. If you have not already created your app, do so by selecting **Add new > Add new app**. (More info: https://docs.microsoft.com/en-us/appcenter/dashboard/creating-and-managing-apps)
 3. Name your app, select the target OS of your app, and the platform your app is written in. 
@@ -17,20 +16,8 @@ No matter which test framework you are using, to run apps in AppCenter/Test or X
 8. On the submit screen follow the "prerequesites" step if this is your first time creating a run in AppCenter/Test. 
 9. Copy the command from **Running Tests > Upload and schedule tests**. 
 
-##### Example (Your exact command will differ)
+#### Example (Your exact command will differ)
 > appcenter test run appium --app "kegr/ReadmeDemo" --devices "kegr/top-4" --app-path pathToFile.apk  --test-series "master" --locale "en_US" --build-dir target/upload
-
-### TestCloud command line
-1. Log into https://testcloud.xamarin.com/
-2. Select **New Test Run**
-3. Select a new or existing app for your upload.
-4. Select your devices to test on.
-5. On the last screen, you can choose the testing framework & OS you are uploading your tests from to get the prototype command.
-
-##### Example (Your exact command will differ)
-> xtc test yourAppFile.apk [API_KEY] --devices [DEVICE_HASH] --series "master" --locale "en_US" --user [EMAIL] --workspace target/upload
-
-I have removed the [API_KEY], [DEVICE_HASH] & [EMAIL] values for privacy reasons, however these will automatically be included when you generate the prototype from the wizard in Test Cloud.
 
 # Framework Samples in this Repo
 ## Appium
