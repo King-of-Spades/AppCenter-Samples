@@ -29,7 +29,7 @@ public class StartAppTest {
 
         capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, "android");
         capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, "foo");
-        capabilities.setCapability(MobileCapabilityType.APP, "[path to local repo]/Appium/swiftnote.apk");
+        capabilities.setCapability(MobileCapabilityType.APP, "[path to local repo]/Appium/Android/swiftnote.apk");
         capabilities.setCapability(MobileCapabilityType.NEW_COMMAND_TIMEOUT, 7913);
         capabilities.setCapability(MobileCapabilityType.AUTOMATION_NAME, "uiautomator2");
 
