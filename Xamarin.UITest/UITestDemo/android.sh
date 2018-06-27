@@ -14,4 +14,5 @@ build_dir='UITestDemo.UITest/bin/Debug'
 # Script injects app_path & build_dir and executes resulting command
 AppCenter_Test_Command=${AppCenter_Test_Command/'pathToFile.apk'/$app_path}
 AppCenter_Test_Command=${AppCenter_Test_Command/'pathToUITestBuildDir'/$build_dir}
+echo $AppCenter_Test_Command
 eval $AppCenter_Test_Command
