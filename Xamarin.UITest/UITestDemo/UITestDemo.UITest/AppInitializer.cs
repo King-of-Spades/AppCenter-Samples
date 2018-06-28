@@ -25,8 +25,9 @@ namespace UITestDemo.UITest
             {
                 return ConfigureApp
                     .Android
-                    // TODO: Update this path to point to your Android app and uncomment the
-                    // code if the app is not included in the solution.
+                    // TODO: You must use .ApkFile() if: 
+                    // a) runnning on Windows 
+                    // b) or your Android project is not referenced by the UITest project.
                     //.ApkFile ("../../../precompiledApps/com.companyname.UITestDemo.apk")
                     .StartApp();
             }
