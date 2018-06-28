@@ -5,12 +5,12 @@
 This sample is designed for use in Visual Studio & includes the sourcecode for a Xamarin.Forms app on Android & iOS platforms & a Xamarin.UITest project. It also includes a precompiled APK & IPA incase you want to try only building, running and uploading Xamarin.UITest.
 
 # Building & running locally
-You can either build the entire solution, or you can just build the Xamarin.UITest project. Note that running Xamarin.UITests locally for iOS is not possible on Windows, but running locally for Android can be done on Windows or Mac.
+You can either build the entire solution, or you can just build the Xamarin.UITest project. 
 
 ## Windows users
 Compared to running on Mac, Xamarin.UITests have additional requirements and limitations as follows:
-- NUnitTestAdapter 2.1.1 is required to run tests locally in Windows. It is not required to run tests in Mac or tests submitted to Visual Studio App Center Test.
 - Xamarin.UITest cannot be run locally against iOS apps in Windows, even if using a paired Mac capable of building iOS apps.
+- NUnitTestAdapter 2.1.1 is required to run tests locally in Windows. It is not required to run tests in Mac or tests submitted to Visual Studio App Center Test.
 - You must set the ANDROID_HOME enviroment variable to the main folder of your Android SDK. You can create this variable as follows:
     1. Go to **Control Panel > System > Advanced System Settings > Environment Variables > System Variables* > New…** 
     2. Name the variable `ANDROID_HOME` and set it to your Android SDK path. (For example `C:\Program Files (x86)\Android\android-sdk`, your location may vary.)
