@@ -1,6 +1,6 @@
 # Provide AppCenter/Test upload command & path to APK.
 AppCenter_Test_Command='paste command here'
-app_path='../swiftnote.apk'
+app_path='../swiftnotes.apk'
 
 # Run using the command "sh upload.sh"
 Build_TestUpload_Command='mvn -DskipTests -P prepare-for-upload package'
