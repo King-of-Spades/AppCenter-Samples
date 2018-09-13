@@ -36,13 +36,7 @@ This sample includes the AppCenter/Test specific steps documented here: https://
 ## Espresso
 This sample includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/espresso
 
+## XCUITest 
+This sample includes the AppCenter/Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xcuitest
 
-
-<!--
-### iOS (Unfinished)
-We are still working on completing an iOS sample.
-
-## XCUITest (Unfinished)
-This sample includes an XCUITest in an Xcode app set up to run in AppCenter/Test based on the steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/xcuitest
-
--->
+- [XCUITest sample](XCUITest/Buttons) This sample iOS App and XCUITest includes an Xcode project for an app and XCUITest written using Swift. It has a shell script for submitting the tests to App Center Test. This sample does not require any App Center specific extensions.
