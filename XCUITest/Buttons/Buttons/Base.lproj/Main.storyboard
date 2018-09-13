@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14113" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Buttons" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ey6-nV-XRx">
+                                <rect key="frame" x="36" y="199" width="302" height="30"/>
+                                <state key="normal" title="More"/>
+                                <connections>
+                                    <action selector="MoreBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="1Je-WM-BWv"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x7W-qo-yyn">
+                                <rect key="frame" x="36" y="250" width="302" height="30"/>
+                                <state key="normal" title="Less"/>
+                                <connections>
+                                    <action selector="LessBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="NIR-dK-8rD"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aJJ-EX-qi9">
+                                <rect key="frame" x="36" y="149" width="302" height="21"/>
+                                <accessibility key="accessibilityConfiguration" identifier="amount_label_id"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KiV-Xe-yvT">
+                                <rect key="frame" x="36" y="305" width="302" height="30"/>
+                                <state key="normal" title="Reset"/>
+                                <connections>
+                                    <action selector="ResetBtnTouchDown:" destination="BYZ-38-t0r" eventType="touchDown" id="teV-Ni-6Kw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="aJJ-EX-qi9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="129" id="0dr-EB-5xd"/>
+                            <constraint firstItem="aJJ-EX-qi9" firstAttribute="leading" secondItem="x7W-qo-yyn" secondAttribute="leading" id="1Vh-Rm-qt4"/>
+                            <constraint firstItem="ey6-nV-XRx" firstAttribute="centerX" secondItem="x7W-qo-yyn" secondAttribute="centerX" id="4Ro-6T-J59"/>
+                            <constraint firstItem="KiV-Xe-yvT" firstAttribute="trailing" secondItem="x7W-qo-yyn" secondAttribute="trailing" id="7I5-gd-e6w"/>
+                            <constraint firstItem="x7W-qo-yyn" firstAttribute="top" secondItem="ey6-nV-XRx" secondAttribute="bottom" constant="21" id="EGQ-tg-M9B"/>
+                            <constraint firstItem="ey6-nV-XRx" firstAttribute="top" secondItem="aJJ-EX-qi9" secondAttribute="bottom" constant="29" id="MO0-xK-zql"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aJJ-EX-qi9" secondAttribute="trailing" constant="37" id="MTe-0G-ihO"/>
+                            <constraint firstItem="KiV-Xe-yvT" firstAttribute="leading" secondItem="x7W-qo-yyn" secondAttribute="leading" id="WeL-zi-wgw"/>
+                            <constraint firstItem="KiV-Xe-yvT" firstAttribute="trailing" secondItem="aJJ-EX-qi9" secondAttribute="trailing" id="YxQ-AM-e3L"/>
+                            <constraint firstItem="aJJ-EX-qi9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="36" id="cx0-gB-yEV"/>
+                            <constraint firstItem="KiV-Xe-yvT" firstAttribute="top" secondItem="x7W-qo-yyn" secondAttribute="bottom" constant="25" id="oiT-PK-YMO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="AmountLBL" destination="aJJ-EX-qi9" id="fib-fa-Jys"/>
+                        <outlet property="LessBtn" destination="x7W-qo-yyn" id="Huw-fZ-k2b"/>
+                        <outlet property="MoreBtn" destination="ey6-nV-XRx" id="xXF-hI-83g"/>
+                        <outlet property="ResetBtn" destination="KiV-Xe-yvT" id="Dar-Et-y2Y"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="32.799999999999997" y="31.934032983508249"/>
+        </scene>
+    </scenes>
+</document>
