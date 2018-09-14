@@ -3,7 +3,7 @@
 #
 # supply app_name and devices_slug from the new test run below
 #
-# run with sh apc-submit.sh
+# run with sh app-submit.sh
 app_name="**APPNAME**"
 devices_slug="**DEVICES**"
 test_series="master"
