@@ -9,7 +9,7 @@ app_path='precompiledApps/com.companyname.UITestDemo.apk'
 # Step 3 Provide the (absolute or relative) path to the UITest project bin folder
 build_dir='UITestDemo.UITest/bin/Debug'
 
-# Step 4 run using the command "sh ios.sh"
+# Step 4 run using the command "sh android.sh"
 
 # Script injects app_path & build_dir and executes resulting command
 AppCenter_Test_Command=${AppCenter_Test_Command/'pathToFile.apk'/$app_path}
