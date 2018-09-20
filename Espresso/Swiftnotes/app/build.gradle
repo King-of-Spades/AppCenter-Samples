@@ -5,7 +5,7 @@ android {
     defaultConfig {
         applicationId 'com.moonpi.swiftnotes'
         minSdkVersion 15
-        targetSdkVersion 27
+        targetSdkVersion 28
         versionCode 11
         versionName '3.1.4'
         testInstrumentationRunner 'android.support.test.runner.AndroidJUnitRunner'
