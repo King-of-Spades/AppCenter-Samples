@@ -1,8 +1,0 @@
-.DS_Store
-.idea/
-build/
-local.properties
-*.iml
-.gradle
-xtcMac
-xtcWin
