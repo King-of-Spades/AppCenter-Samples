@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="UITestDemo.AboutPage" xmlns:vm="clr-namespace:UITestDemo;" Title="{Binding Title}">
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -11,7 +11,16 @@
         <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
-                    <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
+                    <StackLayout AutomationId="stkImage" IsEnabled="true">
+                    <Image x:Name="logo1" Source="icon.png" HorizontalOptions="Start" Aspect="AspectFit" HeightRequest="20" AutomationId="logoWithClickEvent" VerticalOptions="Start" >
+                           <Image.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="logo_Clicked" />
+                            </Image.GestureRecognizers>
+                           </Image>
+                        
+                        <Image x:Name="logo2" Source="icon.png" HorizontalOptions="End"  HeightRequest="20" AutomationId="logoWithNoClickEvent" VerticalOptions="End"  />
+                           
+                   </StackLayout> 
                 </ContentView>
             </StackLayout>
         </StackLayout>
