@@ -11,6 +11,8 @@ namespace UITestDemo
         {
             InitializeComponent();
             BindingContext = viewModel = new ItemsViewModel();
+
+            // Rotating the logo causes it to be unqueryable by Xamarin.UITest on Android
             logo1.Rotation = 90;
         }
 

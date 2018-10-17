@@ -21,8 +21,8 @@ namespace UITestDemo.UITest
             //    #if ENABLE_TEST_CLOUD
             //    Xamarin.Calabash.Start();
             //    #endif
-            if (platform == Platform.Android)
-            {
+            //if (platform == Platform.Android)
+            //{
                 return ConfigureApp
                     .Android
                     // TODO: You must use .ApkFile() if: 
@@ -30,20 +30,20 @@ namespace UITestDemo.UITest
                     // b) or your Android project is not referenced by the UITest project.
                     //.ApkFile ("../../../precompiledApps/com.companyname.UITestDemo.apk")
                     .StartApp();
-            }
+            //}
 
-            return ConfigureApp
-                .iOS
-                // TODO: Update this path to point to your iOS app and uncomment the
-                // code if the app is not included in the solution. 
-                // The .AppBundle method is only supported for iOS simulators.
-                // .AppBundle ("../../../precompiledApps/UITestDemo.iOS.app")
-                // 
-                // .InstalledApp requires you to build an IPA using the Debug 
-                // configuration & a valid provisioning profile, and preinstalling
-                // it on the target device.
-                // .InstalledApp("com.companyname.UITestDemo")
-                .StartApp();
+            //return ConfigureApp
+                //.iOS
+                //// TODO: Update this path to point to your iOS app and uncomment the
+                //// code if the app is not included in the solution. 
+                //// The .AppBundle method is only supported for iOS simulators.
+                //// .AppBundle ("../../../precompiledApps/UITestDemo.iOS.app")
+                //// 
+                //// .InstalledApp requires you to build an IPA using the Debug 
+                //// configuration & a valid provisioning profile, and preinstalling
+                //// it on the target device.
+                //// .InstalledApp("com.companyname.UITestDemo")
+                //.StartApp();
         }
     }
 }

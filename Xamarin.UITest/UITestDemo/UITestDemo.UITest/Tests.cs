@@ -8,7 +8,7 @@ using Xamarin.UITest.Queries;
 namespace UITestDemo.UITest
 {
     [TestFixture(Platform.Android)]
-    [TestFixture(Platform.iOS)]
+    //[TestFixture(Platform.iOS)]
     public class Tests
     {
         IApp app;
@@ -26,22 +26,11 @@ namespace UITestDemo.UITest
         }
 
         [Test]
-        public void AppLaunches()
+        public void ImageRotationInteraction()
         {
-            app.Screenshot("First screen.");
-        }
+            app.Tap(x => x.Marked("About"));
+            app.Flash(x => x.Marked("logoWithClickEvent"));
 
-        [Test]
-        public void ClearTextDemo()
-        {
-            app.Tap(x => x.Marked("Add"));
-            app.Tap(x => x.Text("Item name"));
-
-            app.Screenshot("Before calling ClearText");
-            app.ClearText();
-            app.EnterText("The test worked!");
-            app.Screenshot("Text cleared & replaced");
-            app.Back();
         }
     }
 }

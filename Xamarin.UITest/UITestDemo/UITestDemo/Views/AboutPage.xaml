@@ -12,7 +12,7 @@
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
                     <StackLayout AutomationId="stkImage" IsEnabled="true">
-                    <Image x:Name="logo1" Source="icon.png" HorizontalOptions="Start" Aspect="AspectFit" HeightRequest="20" AutomationId="logoWithClickEvent" VerticalOptions="Start" >
+                    <Image x:Name="logo1" Source="icon.png" HorizontalOptions="Start" Aspect="AspectFit" HeightRequest="20" AutomationId="logoWithClickEvent" VerticalOptions="Start">
                            <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="logo_Clicked" />
                             </Image.GestureRecognizers>
