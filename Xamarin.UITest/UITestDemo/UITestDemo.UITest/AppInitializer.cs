@@ -32,6 +32,9 @@ namespace UITestDemo.UITest
                     .StartApp();
             }
 
+            // Workaround for iOS simulator reset bug
+            Environment.SetEnvironmentVariable("UITEST_FORCE_IOS_SIM_RESTART", "1");
+
             return ConfigureApp
                 .iOS
                 // TODO: Update this path to point to your iOS app and uncomment the
