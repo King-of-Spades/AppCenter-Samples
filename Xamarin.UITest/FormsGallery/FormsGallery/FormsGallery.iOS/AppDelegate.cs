@@ -26,6 +26,11 @@ namespace FormsGallery.iOS
             global::Xamarin.FormsMaps.Init();
             LoadApplication(new App());
 
+#if DEBUG
+            Xamarin.Calabash.Start();
+#endif
+
+
             return base.FinishedLaunching(app, options);
         }
     }
