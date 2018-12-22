@@ -14,7 +14,7 @@ namespace FormsGallery.UITest
         IApp app;
         Platform platform;
 
-        public void pageTest(string page)
+        public void openPage(string page)
         {
             app.Tap(x => x.Marked(page));
             app.Flash(x => x.Marked(page + " Demo"));
@@ -40,17 +40,64 @@ namespace FormsGallery.UITest
         }
 
         [Test]
-        public void Label()
+        public void viewsForPresentation()
         {
-            pageTest("Label");
+            openPage("Label");
+            app.Back();
+
+            openPage("Image");
+            app.Back();
+
+            openPage("BoxView");
+            app.Back();
+
+            openPage("WebView");
+            app.Back();
+
+            openPage("OpenGLView");
+            app.Back();
+
+            openPage("Map");
             app.Back();
         }
 
         [Test]
-        public void Image()
+        public void viewsThatInitiateCommands()
         {
-            pageTest("Image");
+            app.ScrollDownTo("VIEWS THAT INITIATE COMMANDS");
+            app.Screenshot("Scrolled down to Views that initiate commands");
+
+            openPage("Button");
+            //app.Repl();
+            app.Tap("Click Me!");
+            app.Screenshot("Tapped Button");
             app.Back();
+
+            openPage("ImageButton");
+            //app.Repl();
+            app.Tap("XamarinLogo");
+            app.Screenshot("Tapped Button");
+            app.Back();
+
+            openPage("SearchBar");
+            app.Tap("Xamarin.Forms Property");
+            app.EnterText("Page");
+            app.PressEnter();
+            app.Screenshot("Search query entered & result");
+
+            app.Repl();
+
+            //queries not confirmed yet
+            app.Tap("Clear Text");
+            app.Screenshot("Old query deleted");
+
+            app.EnterText("Label");
+            app.Screenshot("New query ready");
+            app.Tap("Cancel");
+            app.Screenshot("New query aborted");
+            app.Back();
+
+
         }
     }
 }
