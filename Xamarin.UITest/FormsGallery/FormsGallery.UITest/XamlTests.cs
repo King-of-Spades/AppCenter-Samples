@@ -23,7 +23,6 @@ namespace FormsGallery.UITest
         public void BeforeEachTest()
         {
             app = AppInitializer.StartApp(platform);
-            //app.Repl();
             app.Tap(x => x.Marked("XAML Pages"));
         }
 
