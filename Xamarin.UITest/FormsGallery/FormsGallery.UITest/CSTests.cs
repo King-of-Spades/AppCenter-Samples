@@ -68,13 +68,11 @@ namespace FormsGallery.UITest
             app.Screenshot("Scrolled down to Views that initiate commands");
 
             openPage("Button");
-            //app.Repl();
             app.Tap("Click Me!");
             app.Screenshot("Tapped Button");
             app.Back();
 
             openPage("ImageButton");
-            //app.Repl();
             app.Tap("XamarinLogo");
             app.Screenshot("Tapped Button");
             app.Back();
