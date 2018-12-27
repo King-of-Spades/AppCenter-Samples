@@ -17,8 +17,11 @@ namespace FormsGallery.UITest
 
         public void openPage(string page)
         {
+            app.WaitForElement("Forms Gallery");
+            Thread.Sleep(1000); // prevents race condition in local simulator test
+            app.ScrollDownTo(page);
+            app.Screenshot("Scrolled Down To" + page);
             app.Tap(x => x.Marked(page));
-            app.Flash(x => x.Marked(page + " Demo"));
             app.Screenshot(page);
         }
 
@@ -43,7 +46,7 @@ namespace FormsGallery.UITest
         [Test]
         public void viewsForPresentation()
         {
-            app.Screenshot("Views for presentation");
+            //app.Screenshot("Views for presentation");
 
             openPage("Label");
             app.Back();
@@ -67,8 +70,8 @@ namespace FormsGallery.UITest
         [Test]
         public void viewsThatInitiateCommands()
         {
-            app.ScrollDownTo("VIEWS THAT INITIATE COMMANDS");
-            app.Screenshot("Scrolled down to Views that initiate commands");
+            //app.ScrollDownTo("VIEWS THAT INITIATE COMMANDS");
+            //app.Screenshot("Scrolled down to Views that initiate commands");
 
             // Button page
             openPage("Button");
@@ -109,10 +112,39 @@ namespace FormsGallery.UITest
         [Test]
         public void viewsForSettingValues()
         {
-            app.ScrollDownTo("VIEWS FOR SETTING VALUES");
-            app.Screenshot("Scrolled down to Views for setting values");
+            //app.Repl();
+            //app.ScrollDownTo("VIEWS FOR COMMON DATA TYPES"); // Header is different on C# vs. Xaml
+            //app.Screenshot("Scrolled down to Views for setting values");
 
+            // Slider (double)
             openPage("Slider (double)");
+            app.Screenshot("Slider");
+            app.SetSliderValue(x => x.Class("UISlider"), 50.5);
+            app.Screenshot("Slider at 50.5");
+            app.Back();
+
+            // Stepper (double)
+            openPage("Stepper (double)");
+
+            // Neutral
+            app.Screenshot("Stepper at 0");
+
+            //Increment thrice
+            app.Tap("Increment");
+            app.Tap("Increment");
+            app.Tap("Increment");
+            app.Screenshot("Stepper at 0.3");
+
+            //Decrement twice
+            app.Tap("Decrement");
+            app.Tap("Decrement");
+            app.Screenshot("Stepper at 0.1");
+            app.Back();
+
+
+            // Switch (bool)
+            openPage("Switch (bool)");
+
 
 
         }
