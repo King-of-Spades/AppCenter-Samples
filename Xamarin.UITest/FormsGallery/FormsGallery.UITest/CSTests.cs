@@ -19,7 +19,7 @@ namespace FormsGallery.UITest
         {
             app.WaitForElement("Forms Gallery");
             Thread.Sleep(1000); // prevents race condition in local simulator test
-            app.ScrollDownTo(page);
+            app.ScrollTo(page);
             app.Screenshot("Scrolled Down To" + page);
             app.Tap(x => x.Marked(page));
             app.Screenshot(page);
