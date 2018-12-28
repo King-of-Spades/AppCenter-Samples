@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-
+using FormsGallery.XamlExamples;
 using Foundation;
 using UIKit;
 
@@ -29,7 +29,6 @@ namespace FormsGallery.iOS
 #if DEBUG
             Xamarin.Calabash.Start();
 #endif
-
 
             return base.FinishedLaunching(app, options);
         }

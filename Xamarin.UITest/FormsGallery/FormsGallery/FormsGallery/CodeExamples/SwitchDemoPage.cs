@@ -20,7 +20,8 @@ namespace FormsGallery.CodeExamples
             Switch switcher = new Switch
             {
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                AutomationId = "SwitchElement"
             };
             switcher.Toggled += switcher_Toggled;
 

@@ -17,14 +17,12 @@ namespace FormsGallery.UITest
 
         public void openPage(string page)
         {
-            app.WaitForElement("Forms Gallery");
-            Thread.Sleep(1000); // prevents race condition in local simulator test
+            app.WaitForElement("C# Pages");
             app.ScrollTo(page);
             app.Screenshot("Scrolled Down To" + page);
             app.Tap(x => x.Marked(page));
             app.Screenshot(page);
         }
-
 
         public CSTests(Platform platform)
         {
@@ -46,8 +44,6 @@ namespace FormsGallery.UITest
         [Test]
         public void viewsForPresentation()
         {
-            //app.Screenshot("Views for presentation");
-
             openPage("Label");
             app.Back();
 
@@ -70,9 +66,6 @@ namespace FormsGallery.UITest
         [Test]
         public void viewsThatInitiateCommands()
         {
-            //app.ScrollDownTo("VIEWS THAT INITIATE COMMANDS");
-            //app.Screenshot("Scrolled down to Views that initiate commands");
-
             // Button page
             openPage("Button");
             app.Tap("Click Me!");
@@ -112,10 +105,6 @@ namespace FormsGallery.UITest
         [Test]
         public void viewsForSettingValues()
         {
-            //app.Repl();
-            //app.ScrollDownTo("VIEWS FOR COMMON DATA TYPES"); // Header is different on C# vs. Xaml
-            //app.Screenshot("Scrolled down to Views for setting values");
-
             // Slider (double)
             openPage("Slider (double)");
             app.Screenshot("Slider");
@@ -125,28 +114,47 @@ namespace FormsGallery.UITest
 
             // Stepper (double)
             openPage("Stepper (double)");
-
-            // Neutral
             app.Screenshot("Stepper at 0");
-
             //Increment thrice
             app.Tap("Increment");
             app.Tap("Increment");
             app.Tap("Increment");
             app.Screenshot("Stepper at 0.3");
-
             //Decrement twice
             app.Tap("Decrement");
             app.Tap("Decrement");
             app.Screenshot("Stepper at 0.1");
             app.Back();
 
-
             // Switch (bool)
             openPage("Switch (bool)");
+            app.Screenshot("Switch page before tapping");
+            app.Tap("SwitchElement");
+            app.Screenshot("Tapped switch using AutomationId");
+            app.Back();
 
+            // DatePicker
+            openPage("DatePicker");
+            app.Screenshot("Date Picker page default");
+            app.Tap("DatePickerElement");
+            app.Screenshot("Accessed Date Picker using AutomationId");
+            // Set Date
+            // Scroll through options
+            // app.Tap(x => x.Class("UILabel").Index(N)); 
+            app.Tap("April"); 
+            app.Tap("5");
+            app.Tap("2020");
+            app.Screenshot("New Date set");
+            app.Back();
 
-
+            // TimePicker
+            openPage("TimePicker");
+            app.Screenshot("Time Picker page default");
+            app.Tap("TimePickerElement");
+            // Set Time
+            app.Tap("5");
+            app.Tap("PM");
+            app.Back();
         }
     }
 }

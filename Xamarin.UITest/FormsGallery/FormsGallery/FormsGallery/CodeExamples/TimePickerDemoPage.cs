@@ -19,7 +19,11 @@ namespace FormsGallery.CodeExamples
             {
                 Format = "T",
                 VerticalOptions = LayoutOptions.CenterAndExpand,
-                Margin = new Thickness(10, 0)
+                Margin = new Thickness(10, 0),
+                AutomationId = "TimePickerElement",
+#if DEBUG
+                Time = new TimeSpan(8, 0, 0) // force time for consistent testing
+#endif
             };
 
             // Build the page.

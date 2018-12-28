@@ -19,8 +19,12 @@ namespace FormsGallery.CodeExamples
             {
                 Format = "D",
                 VerticalOptions = LayoutOptions.CenterAndExpand,
-                Margin = new Thickness(10, 0)
-            };
+                Margin = new Thickness(10, 0),
+                AutomationId = "DatePickerElement",
+#if DEBUG
+                Date = new DateTime(2019, 1, 1) //force date for consistent testing
+#endif
+        };
 
             // Build the page.
             Title = "DatePicker Demo";
