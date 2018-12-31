@@ -50,6 +50,7 @@ namespace FormsGallery.CodeExamples
             // Create the ListView.
             ListView listView = new ListView
             {
+                AutomationId = "listViewElement",
                 // Source of data items.
                 ItemsSource = people,
 

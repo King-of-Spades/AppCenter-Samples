@@ -19,7 +19,7 @@ namespace FormsGallery.UITest
         {
             app.WaitForElement("C# Pages");
             app.ScrollTo(page);
-            app.Screenshot("Scrolled Down To" + page);
+            app.Screenshot("Scrolled To" + page);
             app.Tap(x => x.Marked(page));
             app.Screenshot(page);
         }
@@ -107,14 +107,12 @@ namespace FormsGallery.UITest
         {
             // Slider (double)
             openPage("Slider (double)");
-            app.Screenshot("Slider");
             app.SetSliderValue(x => x.Class("UISlider"), 50.5);
             app.Screenshot("Slider at 50.5");
             app.Back();
 
             // Stepper (double)
             openPage("Stepper (double)");
-            app.Screenshot("Stepper at 0");
             //Increment thrice
             app.Tap("Increment");
             app.Tap("Increment");
@@ -128,14 +126,12 @@ namespace FormsGallery.UITest
 
             // Switch (bool)
             openPage("Switch (bool)");
-            app.Screenshot("Switch page before tapping");
             app.Tap("SwitchElement");
             app.Screenshot("Tapped switch using AutomationId");
             app.Back();
 
             // DatePicker
             openPage("DatePicker");
-            app.Screenshot("Date Picker page default");
             app.Tap("DatePickerElement");
             app.Screenshot("Accessed Date Picker using AutomationId");
             // Set Date
@@ -149,11 +145,108 @@ namespace FormsGallery.UITest
 
             // TimePicker
             openPage("TimePicker");
-            app.Screenshot("Time Picker page default");
             app.Tap("TimePickerElement");
             // Set Time
             app.Tap("5");
+            app.Tap("01");
             app.Tap("PM");
+            app.Screenshot("new time set 5:01 PM");
+            app.Back();
+        }
+
+
+        [Test]
+        public void viewsForEditingText()
+        {
+            // Entry 
+            openPage("Entry (single line)");
+            // Enter Email address
+            app.EnterText("Enter email address", "myEmail@example.com");
+            app.Screenshot("Email entered");
+            app.DismissKeyboard();
+            app.Screenshot("keyboard dismissed");
+            // Enter Password
+            app.EnterText("Enter password", "password");
+            app.Screenshot("password entered");
+            app.DismissKeyboard();
+            app.Screenshot("keyboard dismissed");
+            // Enter phone number
+            app.EnterText("Enter phone number", "8885550123");
+            app.Screenshot("phone number entered");
+            app.DismissKeyboard();
+            app.Screenshot("keyboard dismissed");
+            app.Back();
+
+            // Editor
+            openPage("Editor (multiple lines)");
+            app.EnterText("editorElement",
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+                "Fusce hendrerit vulputate lacinia. " +
+                "Nam consectetur turpis quis fermentum ultricies. " +
+                "Vestibulum et turpis in orci condimentum laoreet in quis metus. " +
+                "Praesent quis mattis odio."
+                );
+            app.Screenshot("entered text in editor");
+            app.DismissKeyboard();
+            app.Screenshot("keyboard dismissed");
+            app.Back();
+        }
+
+        [Test]
+        public void viewsToIndicateActivity() 
+        {
+            // Activity Indicator
+            openPage("ActivityIndicator");
+            app.Back();
+
+            // Progress Bar
+            openPage("ProgressBar");
+            app.Back();
+        }
+
+        [Test]
+        public void viewsThatDisplayCollections()
+        {
+            // Picker
+            openPage("Picker");
+            app.Tap("Color");
+            // Scroll through options
+            // app.Tap(x => x.Class("UILabel").Index(N)); 
+            app.Tap("Fuchsia");
+            app.Screenshot("picked Fuchsia");
+            app.Tap("Lime");
+            app.Screenshot("picked Lime");
+            app.Tap("Gray");
+            app.Screenshot("picked Gray");
+            app.Tap("Done");
+            app.Screenshot("confirmed Gray");
+            app.Back();
+
+            // ListView
+            openPage("ListView");
+            app.Tap("Bob");
+            app.Screenshot("selected Bob");
+            // ScrollDown
+            app.Repl();
+            app.Back();
+
+            // TableView for a menu
+            openPage("TableView for a menu");
+            // Nested views
+            openPage("Label");
+            app.Back();
+            openPage("Image");
+            app.Back();
+            openPage("BoxView");
+            app.Back();
+            openPage("WebView");
+            app.Back();
+            // Finished
+            app.Back();
+
+            // TableView for a form
+            openPage("TableView for a form");
+            app.Repl();
             app.Back();
         }
     }

@@ -18,7 +18,8 @@ namespace FormsGallery.CodeExamples
             Editor editor = new Editor
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
-                Margin = new Thickness(10)
+                Margin = new Thickness(10),
+                AutomationId = "editorElement"
             };
 
             // Build the page.
