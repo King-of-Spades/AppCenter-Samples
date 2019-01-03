@@ -19,7 +19,7 @@ namespace FormsGallery.CodeExamples
             {
                 VerticalOptions = LayoutOptions.FillAndExpand,
                 Margin = new Thickness(10),
-                AutomationId = "editorElement"
+                AutomationId = "EditorElement"
             };
 
             // Build the page.

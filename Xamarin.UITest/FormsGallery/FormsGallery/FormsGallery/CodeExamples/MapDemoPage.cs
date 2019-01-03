@@ -32,7 +32,7 @@ namespace FormsGallery.CodeExamples
 
             // Let's visit Xamarin HQ in San Francisco!
             Position position = new Position(37.79762, -122.40181);
-            map.MoveToRegion(new MapSpan(position, 0.01, 0.01));
+            //map.MoveToRegion(new MapSpan(position, 0.01, 0.01));
             map.Pins.Add(new Pin
             {
                 Label = "Xamarin",

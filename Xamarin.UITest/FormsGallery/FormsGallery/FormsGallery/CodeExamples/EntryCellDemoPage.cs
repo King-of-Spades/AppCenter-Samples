@@ -25,7 +25,7 @@ namespace FormsGallery.CodeExamples
                         new EntryCell
                         {
                             Label = "EntryCell:",
-                            Placeholder = "Type Text Here"
+                            Placeholder = "Type text here"
                         }
                     }
                 }

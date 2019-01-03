@@ -42,15 +42,15 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\FormsGallery\FormsGallery.iOS\FormsGallery.iOS.csproj">
-      <Project>{29AE58F7-406F-4D66-BBEC-2BCF05DC1D8D}</Project>
-      <Name>FormsGallery.iOS</Name>
-      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
-      <Private>False</Private>
-    </ProjectReference>
     <ProjectReference Include="..\FormsGallery\FormsGallery.Android\FormsGallery.Android.csproj">
       <Project>{DEBD7630-3AA9-4F3E-8794-2EF1BFA2DECE}</Project>
       <Name>FormsGallery.Android</Name>
+      <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
+      <Private>False</Private>
+    </ProjectReference>
+    <ProjectReference Include="..\FormsGallery\FormsGallery.iOS\FormsGallery.iOS.csproj">
+      <Project>{29AE58F7-406F-4D66-BBEC-2BCF05DC1D8D}</Project>
+      <Name>FormsGallery.iOS</Name>
       <ReferenceOutputAssembly>False</ReferenceOutputAssembly>
       <Private>False</Private>
     </ProjectReference>
