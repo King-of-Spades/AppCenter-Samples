@@ -61,18 +61,20 @@ namespace FormsGallery.UITest
             app.Back();
 
             OpenPage("Map");
-            app.Device.SetLocation(37.79762, -122.40181);
-            app.Screenshot("Xamarin HQ defined with 5 decmial points");
-            app.Device.SetLocation(27.9881, 86.9250);
-            app.Screenshot("Mt. Everest defined with 4 decimal points");
-            app.Device.SetLocation(51.507, -0.128);
-            app.Screenshot("London defined with 3 decimal points");
-            app.Device.SetLocation(40.71, -74.01);
-            app.Screenshot("New York defined with 2 decmial points");
-            app.Device.SetLocation(48.9, 2.4);
-            app.Screenshot("Paris defined with 1 decimal point");
-            app.Device.SetLocation(-13, -72);
-            app.Screenshot("Machu Picchu defined with 0 decimal points");
+            // Android: Map not displayed & SetLocation not working
+            // iOS: Location not changing
+            //app.Device.SetLocation(37.79762, -122.40181);
+            //app.Screenshot("Xamarin HQ defined with 5 decmial points");
+            //app.Device.SetLocation(27.9881, 86.9250);
+            //app.Screenshot("Mt. Everest defined with 4 decimal points");
+            //app.Device.SetLocation(51.507, -0.128);
+            //app.Screenshot("London defined with 3 decimal points");
+            //app.Device.SetLocation(40.71, -74.01);
+            //app.Screenshot("New York defined with 2 decmial points");
+            //app.Device.SetLocation(48.9, 2.4);
+            //app.Screenshot("Paris defined with 1 decimal point");
+            //app.Device.SetLocation(-13, -72);
+            //app.Screenshot("Machu Picchu defined with 0 decimal points");
             app.Back();
         }
 
@@ -120,7 +122,7 @@ namespace FormsGallery.UITest
         {
             // Slider (double)
             OpenPage("Slider (double)");
-            app.SetSliderValue(x => x.Class("UISlider"), 50.5);
+            app.SetSliderValue("SliderElement", 50.5);
             app.Screenshot("Slider at 50.5");
             app.Back();
 
@@ -159,9 +161,8 @@ namespace FormsGallery.UITest
             // TimePicker
             OpenPage("TimePicker");
             app.Tap("TimePickerElement");
-            app.Repl();
             // Set Time
-            app.Tap("5");
+            app.Tap("8");
             app.Tap("01");
             app.Tap("PM");
             app.Screenshot("new time set 5:01 PM");
@@ -190,7 +191,10 @@ namespace FormsGallery.UITest
             app.DismissKeyboard();
             app.Screenshot("keyboard dismissed");
             app.Back();
-
+            if (platform == Platform.Android)
+            {
+                app.Back(); // needed because first .Back call just deselects field
+            }
             // Editor
             OpenPage("Editor (multiple lines)");
             app.EnterText("EditorElement",
@@ -204,6 +208,10 @@ namespace FormsGallery.UITest
             app.DismissKeyboard();
             app.Screenshot("keyboard dismissed");
             app.Back();
+            if (platform == Platform.Android)
+            {
+                app.Back(); // needed because first .Back call just deselects field
+            }
         }
 
         [Test]
@@ -224,7 +232,7 @@ namespace FormsGallery.UITest
             // Picker
             OpenPage("Picker");
             app.Tap("Color");
-            // Scroll through options
+            // Scroll through options on iOS
             // app.Tap(x => x.Class("UILabel").Index(N)); 
             app.Tap("Fuchsia");
             app.Screenshot("picked Fuchsia");
@@ -306,7 +314,11 @@ namespace FormsGallery.UITest
 
             // SwitchCell
             OpenPage("SwitchCell");
-            app.Tap(x => x.Class("UISwitch"));
+            if (platform == Platform.Android)
+            {
+                app.Tap(x => x.Class("Switch"));
+            }
+            else app.Tap(x => x.Class("UISwitch"));
             app.Screenshot("Flipped switch");
             app.Back();
 

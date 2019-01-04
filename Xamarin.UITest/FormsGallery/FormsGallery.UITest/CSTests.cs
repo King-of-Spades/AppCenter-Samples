@@ -17,6 +17,7 @@ namespace FormsGallery.UITest
 
         public void OpenPage(string page)
         {
+            Console.WriteLine("Attempting to open " + page);
             app.WaitForElement("C# Pages");
             app.ScrollDownTo(page);
             app.Screenshot("Scrolled To" + page);
@@ -60,18 +61,20 @@ namespace FormsGallery.UITest
             app.Back();
 
             OpenPage("Map");
-            app.Device.SetLocation(37.79762, -122.40181);
-            app.Screenshot("Xamarin HQ defined with 5 decmial points");
-            app.Device.SetLocation(27.9881, 86.9250);
-            app.Screenshot("Mt. Everest defined with 4 decimal points");
-            app.Device.SetLocation(51.507, -0.128);
-            app.Screenshot("London defined with 3 decimal points");
-            app.Device.SetLocation(40.71, -74.01);
-            app.Screenshot("New York defined with 2 decmial points");
-            app.Device.SetLocation(48.9, 2.4);
-            app.Screenshot("Paris defined with 1 decimal point");
-            app.Device.SetLocation(-13, -72);
-            app.Screenshot("Machu Picchu defined with 0 decimal points");
+            // Android: Map not displayed & SetLocation not working
+            // iOS: Location not changing
+            //app.Device.SetLocation(37.79762, -122.40181);
+            //app.Screenshot("Xamarin HQ defined with 5 decmial points");
+            //app.Device.SetLocation(27.9881, 86.9250);
+            //app.Screenshot("Mt. Everest defined with 4 decimal points");
+            //app.Device.SetLocation(51.507, -0.128);
+            //app.Screenshot("London defined with 3 decimal points");
+            //app.Device.SetLocation(40.71, -74.01);
+            //app.Screenshot("New York defined with 2 decmial points");
+            //app.Device.SetLocation(48.9, 2.4);
+            //app.Screenshot("Paris defined with 1 decimal point");
+            //app.Device.SetLocation(-13, -72);
+            //app.Screenshot("Machu Picchu defined with 0 decimal points");
             app.Back();
         }
 
@@ -86,7 +89,9 @@ namespace FormsGallery.UITest
 
             // Image Button page
             OpenPage("ImageButton");
-            app.Tap("XamarinLogo");
+            //app.Repl();
+            //app.Tap("XamarinLogo");
+            app.Tap("ImageButtonElement");
             app.Screenshot("Tapped Button");
             app.Back();
 
@@ -119,7 +124,8 @@ namespace FormsGallery.UITest
         {
             // Slider (double)
             OpenPage("Slider (double)");
-            app.SetSliderValue(x => x.Class("UISlider"), 50.5);
+            app.SetSliderValue("SliderElement", 50.5);
+            //app.SetSliderValue(x => x.Class("UISlider"), 50.5);
             app.Screenshot("Slider at 50.5");
             app.Back();
 
@@ -149,7 +155,7 @@ namespace FormsGallery.UITest
             // Set Date
             // Scroll through options
             // app.Tap(x => x.Class("UILabel").Index(N)); 
-            app.Tap("April"); 
+            app.Tap("April");
             app.Tap("5");
             app.Tap("2020");
             app.Screenshot("New Date set");
@@ -188,9 +194,14 @@ namespace FormsGallery.UITest
             app.DismissKeyboard();
             app.Screenshot("keyboard dismissed");
             app.Back();
+            if (platform == Platform.Android)
+            {
+                app.Back(); // needed because first .Back call just deselects field
+            }
 
             // Editor
             OpenPage("Editor (multiple lines)");
+            //app.Repl();
             app.EnterText("EditorElement",
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                 "Fusce hendrerit vulputate lacinia. " +
@@ -202,10 +213,14 @@ namespace FormsGallery.UITest
             app.DismissKeyboard();
             app.Screenshot("keyboard dismissed");
             app.Back();
+            if (platform == Platform.Android)
+            {
+                app.Back(); // needed because first .Back call just deselects field
+            }
         }
 
         [Test]
-        public void ViewsToIndicateActivity() 
+        public void ViewsToIndicateActivity()
         {
             // Activity Indicator
             OpenPage("ActivityIndicator");
@@ -222,16 +237,26 @@ namespace FormsGallery.UITest
             // Picker
             OpenPage("Picker");
             app.Tap("Color");
-            // Scroll through options
+            // Scroll through options on iOS
             // app.Tap(x => x.Class("UILabel").Index(N)); 
+            // Fuchsia
             app.Tap("Fuchsia");
             app.Screenshot("picked Fuchsia");
+            app.Tap("Fuchsia"); // Does nothing on iOS, reopens Android menu
+            // Lime
             app.Tap("Lime");
             app.Screenshot("picked Lime");
+            app.Tap("Lime");
+            // Gray
             app.Tap("Gray");
             app.Screenshot("picked Gray");
-            app.Tap("Done");
-            app.Screenshot("confirmed Gray");
+            app.Tap("Gray");
+            // Finishes iOS selection
+            if (platform == Platform.iOS)
+            {
+                app.Tap("Done");
+                app.Screenshot("confirmed Gray");
+            }
             app.Back();
 
             // ListView
@@ -304,7 +329,11 @@ namespace FormsGallery.UITest
 
             // SwitchCell
             OpenPage("SwitchCell");
-            app.Tap(x => x.Class("UISwitch"));
+            if (platform == Platform.Android)
+            {
+                app.Tap(x => x.Class("Switch"));
+            }
+            else app.Tap(x => x.Class("UISwitch"));
             app.Screenshot("Flipped switch");
             app.Back();
 
@@ -371,7 +400,6 @@ namespace FormsGallery.UITest
             // Up
             app.ScrollUp();
             app.Screenshot("Scrolled Up");
-
             app.Back();
         }
 

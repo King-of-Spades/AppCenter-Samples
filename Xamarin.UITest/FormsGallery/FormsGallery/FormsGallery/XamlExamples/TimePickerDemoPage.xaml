@@ -12,8 +12,8 @@
         <TimePicker Format="T"
                     VerticalOptions="CenterAndExpand"
                     Margin="10, 0"
-                    AutomationId="TimePickerElement" 
-                    
+                    AutomationId="TimePickerElement"
+                    Time="{Binding SelectedTime}"
                     />
 
     </StackLayout>

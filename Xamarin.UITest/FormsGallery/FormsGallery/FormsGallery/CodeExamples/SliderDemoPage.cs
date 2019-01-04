@@ -22,7 +22,8 @@ namespace FormsGallery.CodeExamples
                 Minimum = 0,
                 Maximum = 100,
                 VerticalOptions = LayoutOptions.CenterAndExpand,
-                Margin = new Thickness(10, 0)
+                Margin = new Thickness(10, 0),
+                AutomationId = "SliderElement"
             };
             slider.ValueChanged += OnSliderValueChanged;
 

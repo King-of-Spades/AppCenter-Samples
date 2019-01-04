@@ -22,7 +22,8 @@ namespace FormsGallery.CodeExamples
             {
                 Source = "XamarinLogo.png",
                 HorizontalOptions = LayoutOptions.Center,
-                VerticalOptions = LayoutOptions.CenterAndExpand
+                VerticalOptions = LayoutOptions.CenterAndExpand,
+                AutomationId = "ImageButtonElement"
             };
             imageButton.Clicked += OnImageButtonClicked;
 

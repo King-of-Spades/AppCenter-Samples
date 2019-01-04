@@ -24,7 +24,8 @@ namespace FormsGallery.CodeExamples
                     {
                         new SwitchCell
                         {
-                            Text = "SwitchCell:"
+                            Text = "SwitchCell:",
+                            AutomationId = "SwitchElement"
                         }
                     }
                 }
