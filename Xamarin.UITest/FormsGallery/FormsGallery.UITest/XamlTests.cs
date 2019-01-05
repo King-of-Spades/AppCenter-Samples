@@ -89,7 +89,8 @@ namespace FormsGallery.UITest
 
             // Image Button page
             OpenPage("ImageButton");
-            app.Tap("XamarinLogo");
+            //app.Tap("XamarinLogo");
+            app.Tap("ImageButtonElement");
             app.Screenshot("Tapped Button");
             app.Back();
 
@@ -99,27 +100,44 @@ namespace FormsGallery.UITest
             app.EnterText("Page");
             app.PressEnter();
             app.Screenshot("Search query entered & result");
-
             app.Tap("Xamarin.Forms Property");
-            app.Tap("Clear text");
+            if (platform == Platform.iOS)
+            {
+                app.Tap("Clear text");
+            }
+            else app.Tap("Clear query");
             app.Screenshot("Old query deleted using X");
-
-            app.Tap("Xamarin.Forms Property");
-            app.EnterText("Label");
-            app.Screenshot("New query ready");
-            app.Tap("Cancel");
-            app.Screenshot("Old query cleared using 'Cancel'");
-
+            if (platform == Platform.iOS)
+            {
+                app.Tap("Xamarin.Forms Property");
+                app.EnterText("Label");
+                app.Screenshot("New query ready");
+                app.Tap("Cancel");
+                app.Screenshot("Old query cleared using 'Cancel'");
+            }
             app.Tap("Xamarin.Forms Property");
             app.EnterText("View");
             app.ClearText();
             app.Screenshot("New query canceled using 'ClearText' method");
+            if (platform == Platform.Android) { app.Back(); }
             app.Back();
         }
 
         [Test]
         public void ViewsForSettingValues()
         {
+            string inc, dec;
+            if (platform == Platform.iOS)
+            {
+                inc = "Increment";
+                dec = "Decrement";
+            }
+            else
+            {
+                inc = "+";
+                dec = "-";
+            }
+
             // Slider (double)
             OpenPage("Slider (double)");
             app.SetSliderValue("SliderElement", 50.5);
@@ -129,13 +147,13 @@ namespace FormsGallery.UITest
             // Stepper (double)
             OpenPage("Stepper (double)");
             //Increment thrice
-            app.Tap("Increment");
-            app.Tap("Increment");
-            app.Tap("Increment");
+            app.Tap(inc);
+            app.Tap(inc);
+            app.Tap(inc);
             app.Screenshot("Stepper at 0.3");
             //Decrement twice
-            app.Tap("Decrement");
-            app.Tap("Decrement");
+            app.Tap(dec);
+            app.Tap(dec);
             app.Screenshot("Stepper at 0.1");
             app.Back();
 
@@ -150,11 +168,28 @@ namespace FormsGallery.UITest
             app.Tap("DatePickerElement");
             app.Screenshot("Accessed Date Picker using AutomationId");
             // Set Date
-            // Scroll through options
-            // app.Tap(x => x.Class("UILabel").Index(N)); 
-            app.Tap("April");
-            app.Tap("5");
-            app.Tap("2020");
+            if (platform == Platform.iOS)
+            {
+                app.Tap("April");
+                app.Tap("5");
+                app.Tap("2020");
+                app.Tap("Done");
+            }
+            else
+            {
+                // change year
+                app.Tap("2019");
+                app.Tap("2022");
+                // change month
+                // previous month
+                app.Tap("prev");
+                // next month
+                app.Tap("next");
+                app.Tap("next");
+                // change day
+                app.Tap("date_picker_day_picker"); // taps middle of whole month
+                app.Tap("OK");
+            }
             app.Screenshot("New Date set");
             app.Back();
 
@@ -162,10 +197,29 @@ namespace FormsGallery.UITest
             OpenPage("TimePicker");
             app.Tap("TimePickerElement");
             // Set Time
-            app.Tap("8");
-            app.Tap("01");
-            app.Tap("PM");
-            app.Screenshot("new time set 5:01 PM");
+            if (platform == Platform.iOS)
+            {
+                app.Tap("8");
+                app.Tap("01");
+                app.Tap("PM");
+                app.Tap("Done");
+            } else
+            {
+                // switch to Text entry for time
+                app.Tap("toggle_mode");
+                // hour
+                app.ClearText();
+                app.EnterText("12");
+                // minute
+                app.ClearText("input_minute");
+                app.EnterText("35");
+                // AM/PM
+                app.Tap("AM"); // opens spinner
+                app.Tap("PM"); // changes to PM
+                // finalize time
+                app.Tap("OK");
+            }
+            app.Screenshot("new time set");
             app.Back();
         }
 
@@ -234,14 +288,25 @@ namespace FormsGallery.UITest
             app.Tap("Color");
             // Scroll through options on iOS
             // app.Tap(x => x.Class("UILabel").Index(N)); 
+            // Fuchsia
             app.Tap("Fuchsia");
             app.Screenshot("picked Fuchsia");
+            app.Tap("Fuchsia"); // Does nothing on iOS, reopens Android menu
+            // Lime
             app.Tap("Lime");
             app.Screenshot("picked Lime");
+            app.Tap("Lime");
+            // Gray
             app.Tap("Gray");
             app.Screenshot("picked Gray");
-            app.Tap("Done");
-            app.Screenshot("confirmed Gray");
+            app.Tap("Gray");
+            // Finishes iOS selection
+            if (platform == Platform.iOS)
+            {
+                app.Tap("Done");
+                app.Screenshot("confirmed Gray");
+            }
+            else app.Tap("Cancel");
             app.Back();
 
             // ListView
@@ -249,7 +314,11 @@ namespace FormsGallery.UITest
             app.Tap("Bob");
             app.Screenshot("selected Bob");
             // ScrollTo ("Down")
-            app.ScrollTo("Timothy");
+            if (platform == Platform.iOS)
+            {
+                app.ScrollTo("Timothy");
+            }
+            else app.ScrollDownTo("Timothy"); // ScrollTo broken on Android
             app.Tap("Timothy");
             app.Screenshot("ScrollTo (Down) then tap Timothy");
             // ScrollUp
@@ -269,7 +338,11 @@ namespace FormsGallery.UITest
             app.Tap("Xavier");
             app.Screenshot("ScrollDownTo then tap Xavier");
             //ScrollTo (Up)
-            app.ScrollTo("Freddie");
+            if (platform == Platform.iOS)
+            {
+                app.ScrollTo("Freddie");
+            }
+            else app.ScrollUpTo("Freddie"); // ScrollTo broken on Android
             app.Tap("Freddie");
             app.Screenshot("ScrollTo (Up) then tap Freddie");
             app.Back();
@@ -291,7 +364,10 @@ namespace FormsGallery.UITest
             // TableView for a form
             OpenPage("TableView for a form");
             // Switch Cell
-            app.Tap(x => x.Class("UISwitch"));
+            if (platform == Platform.iOS)
+            {
+                app.Tap(x => x.Class("UISwitch"));
+            } else app.Tap(x => x.Class("Switch"));
             app.Screenshot("Flipped switch");
             // Entry Cell
             app.EnterText("Type text here", "This is an Entry Cell");

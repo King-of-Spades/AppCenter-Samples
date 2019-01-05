@@ -12,7 +12,8 @@
        <ImageButton Source="XamarinLogo.png"
                     HorizontalOptions="Center"
                     VerticalOptions="CenterAndExpand"
-                    Clicked="OnImageButtonClicked" />
+                    Clicked="OnImageButtonClicked"
+                    AutomationId="ImageButtonElement" />
 
         <Label x:Name="label"
                Text="0 ImageButton clicks"
