@@ -36,7 +36,6 @@
   <ItemGroup>
     <Compile Include="CSTests.cs" />
     <Compile Include="AppInitializer.cs" />
-    <Compile Include="XamlTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
