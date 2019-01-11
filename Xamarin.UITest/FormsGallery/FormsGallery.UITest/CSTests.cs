@@ -10,30 +10,11 @@ namespace FormsGallery.UITest
 {
     [TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]
-    public class CSTests
+    public class CSTests : HelperMethods
     {
-        IApp app;
-        Platform platform;
-
-        public void OpenPage(string page)
-        {
-            Console.WriteLine("Attempting to open " + page);
-            app.WaitForElement("C# Pages");
-            app.ScrollDownTo(page);
-            app.Screenshot("Scrolled To" + page);
-            app.Tap(x => x.Marked(page));
-            app.Screenshot(page);
-        }
-
         public CSTests(Platform platform)
         {
             this.platform = platform;
-        }
-
-        [SetUp]
-        public void BeforeEachTest()
-        {
-            app = AppInitializer.StartApp(platform);
         }
 
         [Test]
@@ -167,6 +148,9 @@ namespace FormsGallery.UITest
             OpenPage("DatePicker");
             app.Tap("DatePickerElement");
             app.Screenshot("Accessed Date Picker using AutomationId");
+            app.Repl();
+            // Better way to find & select value in Picker
+            //app.ScrollDownTo(x => x.Marked("April"), x => x.Class("UIPickerTableView").Index(0));
             // Set Date
             if (platform == Platform.iOS)
             {

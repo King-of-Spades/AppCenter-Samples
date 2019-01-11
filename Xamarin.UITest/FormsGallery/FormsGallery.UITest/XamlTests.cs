@@ -10,31 +10,20 @@ namespace FormsGallery.UITest
 {
     [TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]
-    public class XamlTests
+    public class XamlTests : HelperMethods
     {
-        IApp app;
-        Platform platform;
-
-        public void OpenPage(string page)
-        {
-            app.WaitForElement("XAML Pages");
-            app.ScrollDownTo(page);
-            app.Screenshot("Scrolled To" + page);
-            app.Tap(x => x.Marked(page));
-            app.Screenshot(page);
-        }
 
         public XamlTests(Platform platform)
         {
             this.platform = platform;
         }
 
-        [SetUp]
-        public void BeforeEachTest()
-        {
-            app = AppInitializer.StartApp(platform);
-            app.Tap("XAML Pages");
-        }
+        //[SetUp]
+        //public void BeforeEachTest()
+        //{
+        //    app = AppInitializer.StartApp(platform);
+        //    app.Tap("XAML Pages");
+        //}
 
         [Test]
         public void AppLaunches()
