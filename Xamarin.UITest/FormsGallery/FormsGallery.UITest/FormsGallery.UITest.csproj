@@ -38,6 +38,8 @@
     <Compile Include="AppInitializer.cs" />
     <Compile Include="XamlTests.cs" />
     <Compile Include="HelperMethods.cs" />
+    <Compile Include="ViewsForPresentation.cs" />
+    <Compile Include="ViewsThatInitiateCommands.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

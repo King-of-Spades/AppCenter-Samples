@@ -10,12 +10,23 @@ namespace FormsGallery.UITest
         public IApp app;
         public Platform platform;
 
-        public void OpenPage(string page, bool cspage=true)
+        public void OpenPage(string page)
         {
-            if (cspage)
+            OpenPage(page, 0); // Temporary while I update the approach
+        }
+
+        public void OpenPage(string page, int pageType)
+        {
+            if (pageType == 0)
             {
                 app.Tap("C# Pages");
-            } else app.Tap("XAML Pages");
+                app.Screenshot("C# " + page + " page");
+            }
+            else
+            {
+                app.Tap("XAML Pages");
+                app.Screenshot("XAML " + page + " page");
+            }
             app.ScrollDownTo(page);
             app.Screenshot("Scrolled Down To" + page);
             app.Tap(x => x.Marked(page));
