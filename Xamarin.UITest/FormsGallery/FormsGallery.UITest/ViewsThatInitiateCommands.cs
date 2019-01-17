@@ -10,9 +10,9 @@ namespace FormsGallery.UITest
 {
     [TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]
-    public class ViewsForPresentation : HelperMethods
+    public class ViewsThatInitiateCommands : HelperMethods
     {
-        public ViewsForPresentation(Platform platform)
+        public ViewsThatInitiateCommands(Platform platform)
         {
             this.platform = platform;
         }
@@ -24,64 +24,54 @@ namespace FormsGallery.UITest
         }
 
         [Test]
-        public void Label()
+        public void Button()
         {
-            OpenPage("Label", 0);
-            app.Back();
-
-            OpenPage("Label", 1);
-            app.Back();
-        }
-
-
-        [Test]
-        public void Image()
-        {
-            OpenPage("Image", 0);
-            app.Back();
-
-            OpenPage("Image", 1);
+            // Button page
+            OpenPage("Button");
+            app.Tap("Click Me!");
+            app.Screenshot("Tapped Button");
             app.Back();
         }
 
         [Test]
-        public void BoxView()
+        public void ImageButton()
         {
-            OpenPage("BoxView", 0);
-            app.Back();
-
-            OpenPage("BoxView", 1);
+            // Image Button page
+            OpenPage("ImageButton");
+            app.Tap("ImageButtonElement");
+            app.Screenshot("Tapped Button");
             app.Back();
         }
 
         [Test]
-        public void WebView()
+        public void Baseline()
         {
-            OpenPage("WebView", 0);
-            app.Back();
-
-            OpenPage("WebView", 1);
-            app.Back();
-        }
-
-        [Test]
-        public void OpenGLView()
-        {
-            OpenPage("OpenGLView", 0);
-            app.Back();
-
-            OpenPage("OpenGLView", 1);
-            app.Back();
-        }
-
-        [Test]
-        public void Map()
-        {
-            OpenPage("Map", 0);
-            app.Repl();
-            app.Back();
-
-            OpenPage("Map", 1);
+            // Search page
+            OpenPage("SearchBar");
+            app.Tap("Xamarin.Forms Property");
+            app.EnterText("Page");
+            app.PressEnter();
+            app.Screenshot("Search query entered & result");
+            app.Tap("Xamarin.Forms Property");
+            if (platform == Platform.iOS)
+            {
+                app.Tap("Clear text");
+            }
+            else app.Tap("Clear query");
+            app.Screenshot("Old query deleted using X");
+            if (platform == Platform.iOS)
+            {
+                app.Tap("Xamarin.Forms Property");
+                app.EnterText("Label");
+                app.Screenshot("New query ready");
+                app.Tap("Cancel");
+                app.Screenshot("Old query cleared using 'Cancel'");
+            }
+            app.Tap("Xamarin.Forms Property");
+            app.EnterText("View");
+            app.ClearText();
+            app.Screenshot("New query canceled using 'ClearText' method");
+            if (platform == Platform.Android) { app.Back(); }
             app.Back();
         }
     }
