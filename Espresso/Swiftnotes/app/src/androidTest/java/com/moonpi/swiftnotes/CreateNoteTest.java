@@ -4,7 +4,6 @@ package com.moonpi.swiftnotes;
 import android.support.test.espresso.ViewInteraction;
 import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
-import android.test.suitebuilder.annotation.LargeTest;
 import android.view.View;
 import android.view.ViewGroup;
 import android.view.ViewParent;
@@ -36,7 +35,7 @@ import static org.hamcrest.Matchers.is;
 import com.microsoft.appcenter.espresso.Factory;
 import com.microsoft.appcenter.espresso.ReportHelper;
 
-@LargeTest
+//@LargeTest
 @RunWith(AndroidJUnit4.class)
 public class CreateNoteTest {
 
