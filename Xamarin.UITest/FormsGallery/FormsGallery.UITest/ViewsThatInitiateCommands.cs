@@ -26,53 +26,61 @@ namespace FormsGallery.UITest
         [Test]
         public void Button()
         {
-            // Button page
-            OpenPage("Button");
-            app.Tap("Click Me!");
-            app.Screenshot("Tapped Button");
-            app.Back();
+            for (int i=0; i>=1; i++)
+            {
+                OpenPage("Button", i);
+                app.Tap("Click Me!");
+                app.Screenshot("Tapped Button");
+                app.Back();
+            }
+
         }
 
         [Test]
         public void ImageButton()
         {
-            // Image Button page
-            OpenPage("ImageButton");
-            app.Tap("ImageButtonElement");
-            app.Screenshot("Tapped Button");
-            app.Back();
+            for (int i = 0; i >= 1; i++)
+            {
+                OpenPage("ImageButton", i);
+                app.Tap("ImageButtonElement");
+                app.Screenshot("Tapped Button");
+                app.Back();
+            }
         }
 
+
         [Test]
-        public void Baseline()
+        public void SearchPage()
         {
-            // Search page
-            OpenPage("SearchBar");
-            app.Tap("Xamarin.Forms Property");
-            app.EnterText("Page");
-            app.PressEnter();
-            app.Screenshot("Search query entered & result");
-            app.Tap("Xamarin.Forms Property");
-            if (platform == Platform.iOS)
+            for (int i = 0; i >= 1; i++)
             {
-                app.Tap("Clear text");
-            }
-            else app.Tap("Clear query");
-            app.Screenshot("Old query deleted using X");
-            if (platform == Platform.iOS)
-            {
+                OpenPage("SearchBar", i);
                 app.Tap("Xamarin.Forms Property");
-                app.EnterText("Label");
-                app.Screenshot("New query ready");
-                app.Tap("Cancel");
-                app.Screenshot("Old query cleared using 'Cancel'");
+                app.EnterText("Page");
+                app.PressEnter();
+                app.Screenshot("Search query entered & result");
+                app.Tap("Xamarin.Forms Property");
+                if (platform == Platform.iOS)
+                {
+                    app.Tap("Clear text");
+                }
+                else app.Tap("Clear query");
+                app.Screenshot("Old query deleted using X");
+                if (platform == Platform.iOS)
+                {
+                    app.Tap("Xamarin.Forms Property");
+                    app.EnterText("Label");
+                    app.Screenshot("New query ready");
+                    app.Tap("Cancel");
+                    app.Screenshot("Old query cleared using 'Cancel'");
+                }
+                app.Tap("Xamarin.Forms Property");
+                app.EnterText("View");
+                app.ClearText();
+                app.Screenshot("New query canceled using 'ClearText' method");
+                if (platform == Platform.Android) { app.Back(); }
+                app.Back();
             }
-            app.Tap("Xamarin.Forms Property");
-            app.EnterText("View");
-            app.ClearText();
-            app.Screenshot("New query canceled using 'ClearText' method");
-            if (platform == Platform.Android) { app.Back(); }
-            app.Back();
         }
     }
 }
