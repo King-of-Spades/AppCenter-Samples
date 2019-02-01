@@ -26,52 +26,31 @@ namespace FormsGallery.UITest
         [Test]
         public void Label()
         {
-            OpenPage("Label", 0);
-            app.Back();
-
-            OpenPage("Label", 1);
-            app.Back();
+            JustOpen("Label");
         }
-
 
         [Test]
         public void Image()
         {
-            OpenPage("Image", 0);
-            app.Back();
-
-            OpenPage("Image", 1);
-            app.Back();
+            JustOpen("Image");
         }
 
         [Test]
         public void BoxView()
         {
-            OpenPage("BoxView", 0);
-            app.Back();
-
-            OpenPage("BoxView", 1);
-            app.Back();
+            JustOpen("BoxView");
         }
 
         [Test]
         public void WebView()
         {
-            OpenPage("WebView", 0);
-            app.Back();
-
-            OpenPage("WebView", 1);
-            app.Back();
+            JustOpen("WebView");
         }
 
         [Test]
         public void OpenGLView()
         {
-            OpenPage("OpenGLView", 0);
-            app.Back();
-
-            OpenPage("OpenGLView", 1);
-            app.Back();
+            JustOpen("OpenGLView");
         }
 
         [Test]

@@ -40,6 +40,8 @@
     <Compile Include="HelperMethods.cs" />
     <Compile Include="ViewsForPresentation.cs" />
     <Compile Include="ViewsThatInitiateCommands.cs" />
+    <Compile Include="ViewsForSettingValues.cs" />
+    <Compile Include="ViewsForEditingText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
