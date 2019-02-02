@@ -30,14 +30,16 @@ namespace FormsGallery.CodeExamples
 
             Map map = new Map();
 
+            Position position = new Position();
+
             // Let's visit Xamarin HQ in San Francisco!
-            Position position = new Position(37.79762, -122.40181);
+            //Position position = new Position(37.79762, -122.40181);
             //map.MoveToRegion(new MapSpan(position, 0.01, 0.01));
-            map.Pins.Add(new Pin
-            {
-                Label = "Xamarin",
-                Position = position
-            });
+            //map.Pins.Add(new Pin
+            //{
+            //    Label = "Xamarin",
+            //    Position = position
+            //});
 
             // Build the page.
             Title = "Map Demo";

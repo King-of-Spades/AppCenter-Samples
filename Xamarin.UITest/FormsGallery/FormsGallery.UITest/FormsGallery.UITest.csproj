@@ -34,9 +34,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CSTests.cs" />
+    <Compile Include="LayoutsWithMultipleChildren.cs" />
     <Compile Include="AppInitializer.cs" />
-    <Compile Include="XamlTests.cs" />
+    <Compile Include="HelperMethods.cs" />
+    <Compile Include="ViewsForPresentation.cs" />
+    <Compile Include="ViewsThatInitiateCommands.cs" />
+    <Compile Include="ViewsForSettingValues.cs" />
+    <Compile Include="ViewsForEditingText.cs" />
+    <Compile Include="ViewsThatDisplayCollections.cs" />
+    <Compile Include="Cells.cs" />
+    <Compile Include="Pages.cs" />
+    <Compile Include="LayoutsWithSingleContent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
