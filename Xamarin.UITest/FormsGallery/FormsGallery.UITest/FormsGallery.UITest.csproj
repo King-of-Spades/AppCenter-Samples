@@ -42,6 +42,7 @@
     <Compile Include="ViewsThatInitiateCommands.cs" />
     <Compile Include="ViewsForSettingValues.cs" />
     <Compile Include="ViewsForEditingText.cs" />
+    <Compile Include="ViewsThatDisplayCollections.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
