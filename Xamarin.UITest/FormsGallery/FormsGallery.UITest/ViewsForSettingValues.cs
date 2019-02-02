@@ -120,7 +120,7 @@ namespace FormsGallery.UITest
             for (int i = 0; i >= 1; i++)
             {
                 // TimePicker
-                OpenPage("TimePicker");
+                OpenPage("TimePicker", i);
                 app.Tap("TimePickerElement");
                 // Set Time
                 if (platform == Platform.iOS)

@@ -24,45 +24,79 @@ namespace FormsGallery.UITest
         }
 
         [Test]
+        public void PAGENAME()
+        {
+            for (int i = 0; i >= 1; i++)
+            {
+                OpenPage("PAGENAME", i);
+                // do some steps
+                app.Back();
+            }
+        }
+
+        [Test]
         public void Label()
         {
-            JustOpen("Label");
+            for (int i = 0; i >= 1; i++)
+            {
+                OpenPage("Label", i);
+                app.Back();
+            }
         }
 
         [Test]
         public void Image()
         {
-            JustOpen("Image");
+            for (int i = 0; i >= 1; i++)
+            {
+                OpenPage("Image", i);
+                app.Back();
+            }
         }
 
         [Test]
         public void BoxView()
         {
-            JustOpen("BoxView");
+            for (int i = 0; i >= 1; i++)
+            {
+                OpenPage("BoxView", i);
+                app.Back();
+            }
         }
 
         [Test]
         public void WebView()
         {
-            JustOpen("WebView");
+            for (int i = 0; i >= 1; i++)
+            {
+                OpenPage("WebView", i);
+                app.Back();
+            }
         }
 
         [Test]
         public void OpenGLView()
         {
-            JustOpen("OpenGLView");
+            for (int i = 0; i >= 1; i++)
+            {
+                OpenPage("OpenGLView", i);
+                app.Back();
+            }
         }
 
         [Test]
         public void Map()
         {
-            OpenPage("Map", 0);
-            app.Back();
+            for (int i = 0; i >= 1; i++)
+            {
+                OpenPage("Map", i);
+                app.Back();
+            }
 
             // Android: Map not displayed & SetLocation not working
             // iOS: Location not changing
-            app.Device.SetLocation(37.79762, -122.40181);
-            app.Screenshot("Xamarin HQ defined with 5 decmial points");
+            //app.Device.SetLocation(37.79762, -122.40181);
+            //app.Screenshot("Xamarin HQ defined with 5 decmial points");
             //app.Device.SetLocation(27.9881, 86.9250);
             //app.Screenshot("Mt. Everest defined with 4 decimal points");
             //app.Device.SetLocation(51.507, -0.128);
@@ -73,10 +107,7 @@ namespace FormsGallery.UITest
             //app.Screenshot("Paris defined with 1 decimal point");
             //app.Device.SetLocation(-13, -72);
             //app.Screenshot("Machu Picchu defined with 0 decimal points");
-            //app.Back();
-
-            OpenPage("Map", 1);
-            app.Back();
+       
         }
     }
 }
