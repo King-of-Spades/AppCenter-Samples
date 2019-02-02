@@ -43,6 +43,9 @@
     <Compile Include="ViewsForSettingValues.cs" />
     <Compile Include="ViewsForEditingText.cs" />
     <Compile Include="ViewsThatDisplayCollections.cs" />
+    <Compile Include="Cells.cs" />
+    <Compile Include="Pages.cs" />
+    <Compile Include="LayoutsWithSingleContent.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
