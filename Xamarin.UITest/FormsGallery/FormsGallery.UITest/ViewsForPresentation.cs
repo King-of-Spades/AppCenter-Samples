@@ -18,26 +18,9 @@ namespace FormsGallery.UITest
         }
 
         [Test]
-        public void AppLaunches()
-        {
-            app.Screenshot("First screen.");
-        }
-
-        [Test]
-        public void PAGENAME()
-        {
-            for (int i = 0; i >= 1; i++)
-            {
-                OpenPage("PAGENAME", i);
-                // do some steps
-                app.Back();
-            }
-        }
-
-        [Test]
         public void Label()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Label", i);
                 app.Back();
@@ -47,7 +30,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Image()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Image", i);
                 app.Back();
@@ -57,7 +40,7 @@ namespace FormsGallery.UITest
         [Test]
         public void BoxView()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("BoxView", i);
                 app.Back();
@@ -67,7 +50,7 @@ namespace FormsGallery.UITest
         [Test]
         public void WebView()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("WebView", i);
                 app.Back();
@@ -77,7 +60,7 @@ namespace FormsGallery.UITest
         [Test]
         public void OpenGLView()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("OpenGLView", i);
                 app.Back();
@@ -87,7 +70,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Map()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Map", i);
                 app.Back();
