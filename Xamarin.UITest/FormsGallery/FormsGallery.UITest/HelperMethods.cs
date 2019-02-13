@@ -12,6 +12,7 @@ namespace FormsGallery.UITest
 
         public void OpenPage(string page, int pageType)
         {
+            app.ScrollUp(); // makes sure state is reset
             if (pageType == 0)
             {
                 app.Tap("C# Pages");
