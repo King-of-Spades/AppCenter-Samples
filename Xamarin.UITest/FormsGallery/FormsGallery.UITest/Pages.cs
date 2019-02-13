@@ -20,7 +20,7 @@ namespace FormsGallery.UITest
         [Test]
         public void ContentPage()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("ContentPage", i);
                 app.Back();
@@ -30,7 +30,7 @@ namespace FormsGallery.UITest
         [Test]
         public void NavigationPage()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("NavigationPage", i);
                 // Label
@@ -57,7 +57,7 @@ namespace FormsGallery.UITest
         [Test]
         public void MasterDetailPage()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("MasterDetailPage", i);
                 app.SwipeLeftToRight();
@@ -68,7 +68,7 @@ namespace FormsGallery.UITest
         [Test]
         public void TabbedPage()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("TabbedPage", i);
 
@@ -94,7 +94,7 @@ namespace FormsGallery.UITest
         [Test]
         public void CarouselPage()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("CarouselPage", i);
 

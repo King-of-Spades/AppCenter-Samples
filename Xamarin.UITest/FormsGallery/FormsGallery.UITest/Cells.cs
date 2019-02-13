@@ -20,7 +20,7 @@ namespace FormsGallery.UITest
         [Test]
         public void TextCell()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("TextCell", i);
                 app.Back();
@@ -30,7 +30,7 @@ namespace FormsGallery.UITest
         [Test]
         public void ImageCell()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("ImageCell", i);
                 app.Back();
@@ -40,7 +40,7 @@ namespace FormsGallery.UITest
         [Test]
         public void SwitchCell()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("SwitchCell", i);
 
@@ -58,7 +58,7 @@ namespace FormsGallery.UITest
         [Test]
         public void EntryCell()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("EntryCell", i);
                 app.EnterText("Type text here", "This is an Entry Cell");

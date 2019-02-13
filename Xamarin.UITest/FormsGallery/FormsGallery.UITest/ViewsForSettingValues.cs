@@ -20,7 +20,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Slider()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Slider (double)", i);
                 app.SetSliderValue("SliderElement", 50.5);
@@ -45,7 +45,7 @@ namespace FormsGallery.UITest
                 decrement = "-";
             }
 
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Stepper (double)", i);
 
@@ -67,7 +67,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Switch ()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Switch (bool)", i);
                 app.Tap("SwitchElement");
@@ -79,7 +79,7 @@ namespace FormsGallery.UITest
         [Test]
         public void DatePicker ()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("DatePicker", i);
                 app.Tap("DatePickerElement");
@@ -117,7 +117,7 @@ namespace FormsGallery.UITest
         [Test]
         public void TimePicker()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 // TimePicker
                 OpenPage("TimePicker", i);

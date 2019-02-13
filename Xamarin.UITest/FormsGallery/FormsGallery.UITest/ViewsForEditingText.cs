@@ -20,7 +20,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Entry()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Entry (single line)", i);
                 // Enter Email address
@@ -49,7 +49,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Editor()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Editor (multiple lines)", i);
                 //app.Repl();

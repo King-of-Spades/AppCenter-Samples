@@ -20,7 +20,7 @@ namespace FormsGallery.UITest
         [Test]
         public void StackLayout()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("StackLayout", i);
                 app.Back();
@@ -30,7 +30,7 @@ namespace FormsGallery.UITest
         [Test]
         public void AbsoluteLayout()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("AbsoluteLayout", i);
                 app.Screenshot("Additional screenshot to catch them moving");
@@ -41,7 +41,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Grid()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Grid", i);
                 app.Back();
@@ -51,7 +51,7 @@ namespace FormsGallery.UITest
         [Test]
         public void RelativeLayout()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("RelativeLayout", i);
                 app.Back();
@@ -61,7 +61,7 @@ namespace FormsGallery.UITest
         [Test]
         public void FlexLayout()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("FlexLayout", i);
 

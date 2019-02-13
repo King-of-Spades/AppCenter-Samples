@@ -20,7 +20,7 @@ namespace FormsGallery.UITest
         [Test]
         public void ContentView()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("ContentView", i);
                 app.Back();
@@ -30,7 +30,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Frame()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Frame", i);
                 app.Back();
@@ -40,7 +40,7 @@ namespace FormsGallery.UITest
         [Test]
         public void ScrollView()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("ScrollView", i);
                 app.ScrollDown();

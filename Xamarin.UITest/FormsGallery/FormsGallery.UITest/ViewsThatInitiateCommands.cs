@@ -18,15 +18,9 @@ namespace FormsGallery.UITest
         }
 
         [Test]
-        public void AppLaunches()
-        {
-            app.Screenshot("First screen.");
-        }
-
-        [Test]
         public void Button()
         {
-            for (int i=0; i>=1; i++)
+            for (int i=0; i <= 1; i++)
             {
                 OpenPage("Button", i);
                 app.Tap("Click Me!");
@@ -39,7 +33,7 @@ namespace FormsGallery.UITest
         [Test]
         public void ImageButton()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("ImageButton", i);
                 app.Tap("ImageButtonElement");
@@ -52,7 +46,7 @@ namespace FormsGallery.UITest
         [Test]
         public void SearchPage()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("SearchBar", i);
                 app.Tap("Xamarin.Forms Property");

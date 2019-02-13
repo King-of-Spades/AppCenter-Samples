@@ -20,7 +20,7 @@ namespace FormsGallery.UITest
         [Test]
         public void Picker()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Picker", i);
                 app.Tap("Color");
@@ -57,7 +57,7 @@ namespace FormsGallery.UITest
         [Test]
         public void ListView()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("ListView", i);
                 app.Tap("Bob");
@@ -107,7 +107,7 @@ namespace FormsGallery.UITest
         [Test]
         public void TableViewMenu()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("TableView for a menu", i);
 
@@ -129,7 +129,7 @@ namespace FormsGallery.UITest
         [Test]
         public void TableViewForm()
         {
-            for (int i = 0; i >= 1; i++)
+            for (int i = 0; i <= 1; i++)
             {
                 OpenPage("TableView for a form", i);
 
