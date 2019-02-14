@@ -56,62 +56,8 @@ namespace FormsGallery.UITest
             app.Tap(x => x.Css("input").Index(1));
             app.EnterText(password);
             app.Screenshot("Entered Username & password");
-            app.Tap(x => x.Css("button"));
-            app.Screenshot("Tapped login button");
-        }
-
-        [Test]
-        public void FacebookInvalidEmail()
-        {
-            // Dummy account
-            StreamReader stream = new StreamReader(EmbeddedResources.ResourceLoader.GetEmbeddedResourceStream("testDataFile.txt"));
-            // Dummy account
-            string username = "InvalidEmail";
-            stream.ReadLine(); // skip valid email
-            string password = stream.ReadLine();
-
-            OpenPage("WebView");
-            app.EnterText(x => x.Css("input").Index(0), username);
-            app.Tap(x => x.Css("input").Index(1));
-            app.EnterText(password);
-            app.Tap(x => x.Css("button"));
-            app.Screenshot("Tapped login button");
-        }
-
-        [Test]
-        public void FacebookInvalidPassword()
-        {
-            // Dummy account
-            // read datafile line by line
-            StreamReader stream = new StreamReader(EmbeddedResources.ResourceLoader.GetEmbeddedResourceStream("testDataFile.txt"));
-            // Dummy account
-            string username = stream.ReadLine();
-            string password = "InvalidPassword";
-
-
-            OpenPage("WebView");
-            app.EnterText(x => x.Css("input").Index(0), username);
-            app.Tap(x => x.Css("input").Index(1));
-            app.EnterText(password);
-            app.Tap(x => x.Css("button"));
-            app.Screenshot("Tapped login button");
-        }
-
-        [Test]
-        public void WebViewEnterTextBug() // bug on iOS simulator, works as expected on Android
-        {
-            // read datafile line by line
-            StreamReader stream = new StreamReader(EmbeddedResources.ResourceLoader.GetEmbeddedResourceStream("testDataFile.txt"));
-            // Dummy account
-            string username = stream.ReadLine();
-            string password = stream.ReadLine();
-
-
-            OpenPage("WebView");
-            app.EnterText(x => x.Css("input").Index(0), username);
-            app.EnterText(x => x.Css("input").Index(1), password);
-            app.DismissKeyboard();
-            app.Screenshot("Text entered before instead of after changing selection");
+            //app.Tap(x => x.Css("button"));
+            //app.Screenshot("Tapped login button");
         }
     }
 }
