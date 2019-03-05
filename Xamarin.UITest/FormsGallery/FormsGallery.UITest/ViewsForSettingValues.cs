@@ -76,6 +76,8 @@ namespace FormsGallery.UITest
             }
         }
 
+
+
         [Test]
         public void DatePicker ()
         {
@@ -84,31 +86,11 @@ namespace FormsGallery.UITest
                 OpenPage("DatePicker", i);
                 app.Tap("DatePickerElement");
                 app.Screenshot("Accessed Date Picker using AutomationId");
-                // Better way to find & select value in Picker
-                //app.ScrollDownTo(x => x.Marked("April"), x => x.Class("UIPickerTableView").Index(0));
-                // Set Date
-                if (platform == Platform.iOS)
-                {
-                    app.Tap("April");
-                    app.Tap("5");
-                    app.Tap("2020");
-                    app.Tap("Done");
-                }
-                else
-                {
-                // change year
-                    app.Tap("2019");
-                    app.Tap("2022");
-                // change month
-                // previous month
-                    app.Tap("prev");
-                // next month
-                    app.Tap("next");
-                    app.Tap("next");
-                // change day
-                    app.Tap("date_picker_day_picker"); // taps middle of whole month
-                    app.Tap("OK");
-                }
+
+                SetDate("October", 21, 2015); // Back to the Future day
+                
+                app.Repl();
+
                 app.Screenshot("New Date set");
                 app.Back();
             }
