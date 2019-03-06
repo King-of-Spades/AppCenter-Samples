@@ -1,6 +1,7 @@
 ﻿using System;
 using NUnit.Framework;
 using Xamarin.UITest;
+using System.Globalization;
 
 namespace FormsGallery.UITest
 {
@@ -29,44 +30,82 @@ namespace FormsGallery.UITest
             app.Screenshot(page);
         }
 
-        public void SetDate(string month, int day, int year)
+
+        public void SetDatePicker(DateTime date)
         {
-            string dayString = day.ToString();
-            string yearString = year.ToString();
+            string month = DateTimeFormatInfo.CurrentInfo.GetMonthName(date.Month);
+            string day = date.Day.ToString();
+            string year = date.Year.ToString();
 
             if (platform == Platform.iOS)
             {
                 app.ScrollDownTo(x => x.Marked(month), x => x.Class("UIPickerTableView").Index(0));
                 app.Tap(month);
 
-                app.ScrollDownTo(x => x.Marked(dayString), x => x.Class("UIPickerTableView").Index(3), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0,2,0));
-                app.Tap(dayString);
+                app.ScrollDownTo(x => x.Marked(day), x => x.Class("UIPickerTableView").Index(3), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
+                app.Tap(day);
 
-                if (year > 2019) // have to scroll up or down depending on if year is too far away from the current year AND if it's higher or lower
+                int checkYear = DateTime.Compare(DateTime.Now, date);
+
+                if (checkYear < 0)
                 {
-                    app.ScrollDownTo(x => x.Marked(yearString), x => x.Class("UIPickerTableView").Index(6), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
+                    app.ScrollDownTo(x => x.Marked(year), x => x.Class("UIPickerTableView").Index(6), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
                 }
                 else
                 {
-                    app.ScrollUpTo(x => x.Marked(yearString), x => x.Class("UIPickerTableView").Index(6), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
+                    app.ScrollUpTo(x => x.Marked(year), x => x.Class("UIPickerTableView").Index(6), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
                 }
-                app.Tap(yearString);
-
-            }
-            else // Android
+            } else // android
             {
                 // change year
-                app.Tap("2019");
-                app.Tap("2022");
-                // change month
-                // previous month
-                app.Tap("prev");
-                // next month
-                app.Tap("next");
-                app.Tap("next");
-                // change day
-                app.Tap("date_picker_day_picker"); // taps middle of whole month
-                app.Tap("OK");
+                //        app.Tap("2019");
+                //        app.Tap("2022");
+                //        // change month
+                //        // previous month
+                //        app.Tap("prev");
+                //        // next month
+                //        app.Tap("next");
+                //        app.Tap("next");
+                //        // change day
+                //        app.Tap("date_picker_day_picker"); // taps middle of whole month
+                //        app.Tap("OK");
+            }
+        }
+
+        public void SetTimePicker(int hour, int minute, bool am)
+        {
+            string hourString = hour.ToString();
+            string minuteString = minute.ToString();
+
+            if (platform == Platform.iOS)
+            {
+                app.ScrollDownTo(x => x.Marked(hourString), x => x.Class("UIPickerTableView").Index(0));
+                app.Tap(hourString);
+
+                app.ScrollDownTo(x => x.Marked(minuteString), x => x.Class("UIPickerTableView").Index(3), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
+                app.Tap(minuteString);
+
+                if (am)
+                {
+                    app.Tap("AM");
+                }
+                else app.Tap("PM");
+
+            } else // Android
+            {
+                // switch to Text entry for time
+                //app.Tap("toggle_mode");
+                //// hour
+                //app.ClearText();
+                //app.EnterText("12");
+                //// minute
+                //app.ClearText("input_minute");
+                //app.EnterText("35");
+                //// AM/PM
+                //app.Tap("AM"); // opens spinner
+                //app.Tap("PM"); // changes to PM
+                //               // finalize time
+                //app.Tap("OK");
             }
         }
 

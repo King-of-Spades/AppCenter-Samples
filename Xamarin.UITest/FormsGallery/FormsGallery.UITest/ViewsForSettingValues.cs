@@ -86,11 +86,7 @@ namespace FormsGallery.UITest
                 OpenPage("DatePicker", i);
                 app.Tap("DatePickerElement");
                 app.Screenshot("Accessed Date Picker using AutomationId");
-
-                SetDate("October", 21, 2015); // Back to the Future day
-                
-                app.Repl();
-
+                SetDatePicker(new DateTime(1985, 10, 26));
                 app.Screenshot("New Date set");
                 app.Back();
             }
@@ -104,30 +100,7 @@ namespace FormsGallery.UITest
                 // TimePicker
                 OpenPage("TimePicker", i);
                 app.Tap("TimePickerElement");
-                // Set Time
-                if (platform == Platform.iOS)
-                {
-                    app.Tap("5");
-                    app.Tap("01");
-                    app.Tap("PM");
-                    app.Tap("Done");
-                }
-                else
-                {
-                    // switch to Text entry for time
-                    app.Tap("toggle_mode");
-                    // hour
-                    app.ClearText();
-                    app.EnterText("12");
-                    // minute
-                    app.ClearText("input_minute");
-                    app.EnterText("35");
-                    // AM/PM
-                    app.Tap("AM"); // opens spinner
-                    app.Tap("PM"); // changes to PM
-                                   // finalize time
-                    app.Tap("OK");
-                }
+                SetTimePicker(1, 16, false);
                 app.Screenshot("new time set");
                 app.Back();
             }
