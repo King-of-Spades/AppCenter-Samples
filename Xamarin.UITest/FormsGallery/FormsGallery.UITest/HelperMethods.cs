@@ -38,63 +38,22 @@ namespace FormsGallery.UITest
             string day = date.Day.ToString();
             string year = date.Year.ToString();
 
-            //Invoke the native method selectRow() 
-            app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Month, "inComponent", 0, "animated", true)); // brings month in scope
-            app.Tap(month); // actually selects month
+            if (platform == Platform.iOS)
+            {
+                //Invoke the native method selectRow() 
+                app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Month, "inComponent", 0, "animated", true)); // brings month in scope
+                app.Tap(month); // actually selects month
 
-            app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Day, "inComponent", 1, "animated", true));
-            app.Tap(day);
+                app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Day, "inComponent", 1, "animated", true));
+                app.Tap(day);
 
-            app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Year, "inComponent", 2, "animated", true));
-            app.Tap(year);
-
-            // alternative Android approach
-            //Activate the DatePicker
-            //app.Tap(x => x.Id("{AutomationId of Xamarin.Forms.DatePicker}"));
-
-            ////Wait for DatePicker animation to completed
-            //app.WaitForElement(x => x.Class("DatePicker"));
-
-            ////Invoke updateDate() method on displayed DatePicker
-            //app.Query(x => x.Class("DatePicker").Invoke("updateDate", date.Year, date.Month, date.Day));
-
-            ////Tap the ok button to close the DatePicker dialogue
-            //app.Tap(x => x.Id("button1"));//Ok Button in DatePicker Dialogue
-
-
-            //if (platform == Platform.iOS)
-            //{
-            //    app.ScrollDownTo(x => x.Marked(month), x => x.Class("UIPickerTableView").Index(0));
-            //    app.Tap(month);
-
-            //    app.ScrollDownTo(x => x.Marked(day), x => x.Class("UIPickerTableView").Index(3), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
-            //    app.Tap(day);
-
-            //    int checkYear = DateTime.Compare(DateTime.Now, date);
-
-            //    if (checkYear < 0)
-            //    {
-            //        app.ScrollDownTo(x => x.Marked(year), x => x.Class("UIPickerTableView").Index(6), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
-            //    }
-            //    else
-            //    {
-            //        app.ScrollUpTo(x => x.Marked(year), x => x.Class("UIPickerTableView").Index(6), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
-            //    }
-            //} else // android
-            //{
-            //    // change year
-            //    //        app.Tap("2019");
-            //    //        app.Tap("2022");
-            //    //        // change month
-            //    //        // previous month
-            //    //        app.Tap("prev");
-            //    //        // next month
-            //    //        app.Tap("next");
-            //    //        app.Tap("next");
-            //    //        // change day
-            //    //        app.Tap("date_picker_day_picker"); // taps middle of whole month
-            //    //        app.Tap("OK");
-            //}
+                app.Query(x => x.Class("UIPickerView").Invoke("selectRow", date.Year, "inComponent", 2, "animated", true));
+                app.Tap(year);
+            } else // Android
+            {
+                app.Query(x => x.Class("DatePicker").Invoke("updateDate", date.Year, date.Month, date.Day));
+                app.Tap("OK");
+            }
         }
 
         public void SetTimePicker(int hour, int minute, bool am)
@@ -102,38 +61,38 @@ namespace FormsGallery.UITest
             string hourString = hour.ToString();
             string minuteString = minute.ToString();
 
-            // alternative timepicker approach
+            DateTime time = new DateTime(1985, 10, 25, hour, minute, 0);
+            int ampm;
 
+            if (am)
+            {
+                ampm = 0;
+            }
+            else ampm = 1;
 
             if (platform == Platform.iOS)
             {
-                app.ScrollDownTo(x => x.Marked(hourString), x => x.Class("UIPickerTableView").Index(0));
-                app.Tap(hourString);
-
-                app.ScrollDownTo(x => x.Marked(minuteString), x => x.Class("UIPickerTableView").Index(3), ScrollStrategy.Auto, 0.67, 500, true, new TimeSpan(0, 2, 0));
-                app.Tap(minuteString);
-
-                if (am)
-                {
-                    app.Tap("AM");
-                }
-                else app.Tap("PM");
+                app.Query(x => x.Class("UIPickerView").Invoke("selectRow", time.Hour, "inComponent", 0, "animated", true)); //if time.Hour == 0, than hour is '1'. if time.Hour == 11, than hour is '12'
+                app.Query(x => x.Class("UIPickerView").Invoke("selectRow", time.Minute, "inComponent", 1, "animated", true)); //if time.Minute == 0, than minutes is '1'. if time.Minute == 59, than minutes is '59'
+                app.Query(x => x.Class("UIPickerView").Invoke("selectRow", ampm, "inComponent", 2, "animated", true)); //0 == AM and 1 == PM
 
             } else // Android
             {
                 // switch to Text entry for time
-                //app.Tap("toggle_mode");
-                //// hour
-                //app.ClearText();
-                //app.EnterText("12");
-                //// minute
-                //app.ClearText("input_minute");
-                //app.EnterText("35");
-                //// AM/PM
-                //app.Tap("AM"); // opens spinner
-                //app.Tap("PM"); // changes to PM
-                //               // finalize time
-                //app.Tap("OK");
+                app.Tap("toggle_mode");
+                // hour
+                app.ClearText();
+                app.EnterText(hourString);
+                // minute
+                app.ClearText("input_minute");
+                app.EnterText(minuteString);
+                // AM/PM
+                if (!am)
+                {
+                    app.Tap("AM"); // opens spinner
+                    app.Tap("PM"); // changes to PM 
+                }
+                app.Tap("OK"); // finalize time
             }
         }
 

@@ -88,7 +88,6 @@ namespace FormsGallery.UITest
                 app.Screenshot("Accessed Date Picker using AutomationId");
                 SetDatePicker(new DateTime(1985, 10, 26));
                 app.Screenshot("New Date set: October 26th, 1985");
-                app.Repl();
                 app.Back();
             }
         }
