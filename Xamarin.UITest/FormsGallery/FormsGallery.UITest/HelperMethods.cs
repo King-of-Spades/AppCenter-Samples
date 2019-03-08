@@ -60,8 +60,9 @@ namespace FormsGallery.UITest
         {
             string hourString = hour.ToString();
             string minuteString = minute.ToString();
+            DateTime date = DateTime.Now;
 
-            DateTime time = new DateTime(1985, 10, 25, hour, minute, 0);
+            DateTime time = new DateTime(date.Year, date.Month, date.Day, hour, minute, 0);
             int ampm;
 
             if (am)
