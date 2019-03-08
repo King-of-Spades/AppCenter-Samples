@@ -76,6 +76,8 @@ namespace FormsGallery.UITest
             }
         }
 
+
+
         [Test]
         public void DatePicker ()
         {
@@ -84,32 +86,8 @@ namespace FormsGallery.UITest
                 OpenPage("DatePicker", i);
                 app.Tap("DatePickerElement");
                 app.Screenshot("Accessed Date Picker using AutomationId");
-                // Better way to find & select value in Picker
-                //app.ScrollDownTo(x => x.Marked("April"), x => x.Class("UIPickerTableView").Index(0));
-                // Set Date
-                if (platform == Platform.iOS)
-                {
-                    app.Tap("April");
-                    app.Tap("5");
-                    app.Tap("2020");
-                    app.Tap("Done");
-                }
-                else
-                {
-                // change year
-                    app.Tap("2019");
-                    app.Tap("2022");
-                // change month
-                // previous month
-                    app.Tap("prev");
-                // next month
-                    app.Tap("next");
-                    app.Tap("next");
-                // change day
-                    app.Tap("date_picker_day_picker"); // taps middle of whole month
-                    app.Tap("OK");
-                }
-                app.Screenshot("New Date set");
+                SetDatePicker(new DateTime(1985, 10, 26));
+                app.Screenshot("New Date set: October 26th, 1985");
                 app.Back();
             }
         }
@@ -122,30 +100,7 @@ namespace FormsGallery.UITest
                 // TimePicker
                 OpenPage("TimePicker", i);
                 app.Tap("TimePickerElement");
-                // Set Time
-                if (platform == Platform.iOS)
-                {
-                    app.Tap("5");
-                    app.Tap("01");
-                    app.Tap("PM");
-                    app.Tap("Done");
-                }
-                else
-                {
-                    // switch to Text entry for time
-                    app.Tap("toggle_mode");
-                    // hour
-                    app.ClearText();
-                    app.EnterText("12");
-                    // minute
-                    app.ClearText("input_minute");
-                    app.EnterText("35");
-                    // AM/PM
-                    app.Tap("AM"); // opens spinner
-                    app.Tap("PM"); // changes to PM
-                                   // finalize time
-                    app.Tap("OK");
-                }
+                SetTimePicker(1, 16, false);
                 app.Screenshot("new time set");
                 app.Back();
             }
