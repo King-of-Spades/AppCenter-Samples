@@ -17,7 +17,7 @@
         <dependency>
             <groupId>io.appium</groupId>
             <artifactId>java-client</artifactId>
-            <version>5.0.4</version>
+            <version>6.1.0</version>
         </dependency>
         <dependency>
             <groupId>junit</groupId>
@@ -27,7 +27,7 @@
         <dependency>
             <groupId>com.microsoft.appcenter</groupId>
             <artifactId>appium-test-extension</artifactId>
-            <version>1.0</version>
+            <version>1.5</version>
         </dependency>
     </dependencies>
 
