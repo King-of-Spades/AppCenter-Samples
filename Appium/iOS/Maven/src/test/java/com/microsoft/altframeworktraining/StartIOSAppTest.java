@@ -38,7 +38,7 @@ public class StartIOSAppTest {
 
 //        4. Uncomment the lines for either the iOS simulator or iOS device below
 //        (Simulator) *Make sure to unzip the included file
-//        String appPath = "/Users/kentgreen/Projects/AppCenter-Test-Samples/Appium/iOS/UITestDemo.iOS.app";
+//        String appPath = "/Users/kentgreen/Projects/AppCenter-Test-Samples/Appium/iOS/UITestDemo.iOS.app.zip";
 //        capabilities.setCapability(MobileCapabilityType.APP, appPath);
 
 //        (Device)
