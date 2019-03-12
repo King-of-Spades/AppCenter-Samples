@@ -35,6 +35,11 @@ By default typically the Android SDK is located at `~/Library/Android/sdk` (Mac)
    
 See Also: [upload.sh](Maven/upload.sh)
 
+# Troubleshooting tips
+### WebDriverException 
+> org.openqa.selenium.WebDriverException: It is impossible to create a new session because 'createSession' which takes HttpClient, InputStream and long was not found or it is not accessible
+
+One way to reproduce this issue is if you have an invalid path to the APK as noted in Step #1 of the [Building & Running locally directions](#building--running-locally). It is unknown if other causes may trigger this specific error message to appear.
 
 # About Swiftnotes Sample App
 Within this repo, the sourcecode for this app can be found in the [Espresso/Swiftnotes](../../espresso/swiftnotes) folder. That folder also contains the LICENSE file for the sample.
