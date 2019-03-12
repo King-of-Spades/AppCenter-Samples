@@ -53,6 +53,14 @@ namespace FormsGallery.UITest
             for (int i = 0; i <= 1; i++)
             {
                 OpenPage("WebView", i);
+
+                Thread.Sleep(5000);
+                //app.Query(x => x.Marked("WebViewElement").Invoke("loadUrl", "https://www.facebook.com/")); works on Android
+                // app.Query(x => x.Marked("WebViewElement").Invoke("loadUrl", "https://www.facebook.com/"));
+                app.Query(x => x.Marked("WebViewElement").Invoke("Reload"));
+
+                Thread.Sleep(5000);
+
                 app.Back();
             }
         }
