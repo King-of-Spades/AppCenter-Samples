@@ -22,7 +22,7 @@ By default typically the Android SDK is located at `~/Library/Android/sdk` (Mac)
 # Building & running locally
 (Note: The author of this sample used IntelliJ IDEA 2017.3.4 (Ultimate Edition) on Mac OS X 10.13.3, though other tools for building may work.)
 
-1. Provide the absolute path to swiftnote.apk here: [Maven/src/test/java/com/microsoft/altframeworktraining/StartAppTest.java#L32] 
+1. Provide the absolute path to swiftnote.apk here: Maven/src/test/java/com/microsoft/altframeworktraining/StartAppTest.java#L32 
 2. Build the Maven project using your perferred method. Your IDE may prompt you to auto-apply some settings, in which case confirm them. 
 3. Make sure to start the local Appium server before running tests, otherwise the tests will fail. 
 
