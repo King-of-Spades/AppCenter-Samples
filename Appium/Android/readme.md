@@ -22,7 +22,7 @@ By default typically the Android SDK is located at `~/Library/Android/sdk` (Mac)
 # Building & running locally
 (Note: The author of this sample used IntelliJ IDEA 2017.3.4 (Ultimate Edition) on Mac OS X 10.13.3, though other tools for building may work.)
 
-1. Provide the absolute path to swiftnote.apk here: [Maven/src/test/java/com/microsoft/altframeworktraining/StartAppTest.java#L32](Maven/src/test/java/com/microsoft/altframeworktraining/StartAppTest.java#L32) 
+1. Provide the absolute path to swiftnote.apk here: [Maven/src/test/java/com/microsoft/altframeworktraining/StartAppTest.java#L32] 
 2. Build the Maven project using your perferred method. Your IDE may prompt you to auto-apply some settings, in which case confirm them. 
 3. Make sure to start the local Appium server before running tests, otherwise the tests will fail. 
 
@@ -39,7 +39,7 @@ See Also: [upload.sh](Maven/upload.sh)
 ### WebDriverException 
 > org.openqa.selenium.WebDriverException: It is impossible to create a new session because 'createSession' which takes HttpClient, InputStream and long was not found or it is not accessible
 
-One way to reproduce this issue is if you have an invalid path to the APK as noted in Step #1 of the 'Building & Running locally` directions. It is possible, but unknown; if other issues may cause this specific error message to appear.
+One way to reproduce this issue is if you have an invalid path to the APK as noted in Step #1 of the [Building & Running locally directions](#building--running-locally). It is unknown if other causes may trigger this specific error message to appear.
 
 # About Swiftnotes Sample App
 Within this repo, the sourcecode for this app can be found in the [Espresso/Swiftnotes](../../espresso/swiftnotes) folder. That folder also contains the LICENSE file for the sample.
