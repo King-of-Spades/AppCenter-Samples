@@ -27,7 +27,10 @@ You can run the UITest project locally without building the app projects by usin
 (You cannot use the precompiled IPA for local testing because it will not be signed for one of your devices. If you build the IPA for the project first though, you can install it on the device and point to it using '.InstalledApp'.)
 
 3. Build the Xamarin.UITest project.
-4. Run the Xamarin.UITests using the steps in this guide: [Testing on devices](https://developer.xamarin.com/guides/testcloud/uitest/working-with/testing-on-devices/)
+4. Running the tests differs slightly if you're using Visual Studio for Mac or Visual Studio on Windows:
+   - **VS for Mac** - Go to **View > Pads > Unit Tests > Run All** 
+   - **VS for Windows** - Go to **Test > Windows > Test Explorer > Run All**. When testing on Windows, only Android is supported.
+
 
 ## Running locally with building the Android/iOS apps
 1. You can build individual projects or the entire solution by right-clicking them in the solution pad and selecting "Build [Project/Solution Name]." 
@@ -37,7 +40,9 @@ You can run the UITest project locally without building the app projects by usin
    - 'UITestDemo.iOS' must be built using a "Debug" configuration. This is because by default iOS apps built for distrbution are rejected from the iOS app store if they contain 'Calabash' the testing framework which allows Xamarin.UITest to interact with iOS apps. 
    - Android APKs can be run on either a physical Android device or emulator interchangably. iOS must use a '.app' build to run on an iOS simulator & an '.IPA' with a valid signing identity to run on an iOS device.
 
-3. Run the Xamarin.UITests using the steps in this guide: [Testing on devices](https://developer.xamarin.com/guides/testcloud/uitest/working-with/testing-on-devices/)
+3. Running the tests differs slightly if you're using Visual Studio for Mac or Visual Studio on Windows:
+   - **VS for Mac** - Go to **View > Pads > Unit Tests > Run All** 
+   - **VS for Windows** - Go to **Test > Windows > Test Explorer > Run All**. When testing on Windows, only Android is supported; and you must also set the [`.ApkFile()` path in the AppInitializer.cs ConfigureApp statement](/Xamarin.UITest/UITestDemo/UITestDemo.UITest/AppInitializer.cs#L31)
 
 # Uploading tests
 1. Build the Xamarin.UITest project.
