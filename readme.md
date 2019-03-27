@@ -1,5 +1,5 @@
 # AppCenter/Test samples
-These samples are preconstructed to demonstrate how each test framework included can be used along with a demo app in AppCenter/Test. Where practical they are also compatible with Xamarin Test Cloud.
+These samples are preconstructed to demonstrate how each test framework included can be used along with a demo app in AppCenter/Test.
 
 Primary documentation for AppCenter/Test is available here: https://docs.microsoft.com/en-us/appcenter/test-cloud/
 
