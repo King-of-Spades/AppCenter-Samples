@@ -4,7 +4,7 @@ FormsGallery Xamarin.UITest sample
 This sample displays all the views, cells, layouts, and pages available in Xamarin.Forms, one per page; and some basic Xamarin.UITest interactions with those elements. 
 
 - Original sample based on: https://github.com/xamarin/xamarin-forms-samples/tree/master/FormsGallery
-- Some inspiration and implementation ideas inspired by: https://github.com/michael-watson/forms-xtc-guide (The readme contains code examples very similar to this project, but those eamples are not actually implmented into the project code.)
+- Some inspiration and implementation ideas from: https://github.com/michael-watson/forms-xtc-guide (The readme contains code examples very similar to this project, but those eamples are not actually implmented into the project code.)
 
 # General Xamarin.UITest project structure
 ## AppInitializer
