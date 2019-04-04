@@ -1,5 +1,5 @@
 # Provide AppCenter/Test upload command & path to APK.
-AppCenter_Test_Command='appcenter test run appium --app "XTCTeam/Swiftnotes-Appium" --devices "XTCTeam/moto-g-android-4-dot-4-4-9" --app-path pathToFile.apk --test-series "jdk-11" --locale "en_US" --build-dir target/upload'
+AppCenter_Test_Command='paste command here'
 app_path='../swiftnotes.apk'
 
 # Run using the command "sh upload.sh"
