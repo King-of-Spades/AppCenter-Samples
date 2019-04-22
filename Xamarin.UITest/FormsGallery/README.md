@@ -1,3 +1,9 @@
+# Build Status Badge
+[![Build status](https://build.appcenter.ms/v0.1/apps/67b70b47-a923-4864-bc05-170020d0eefe/branches/master/badge)](https://appcenter.ms)
+(Linked from App Center)
+
+
+
 FormsGallery Xamarin.UITest sample
 ============
 
