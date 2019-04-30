@@ -26,14 +26,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B08B82C8213971B900AC4E98 /* Buttons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Buttons.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B08B82C8213971B900AC4E98 /* MyButtons.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyButtons.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08B82CB213971B900AC4E98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B08B82CD213971B900AC4E98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B08B82D0213971B900AC4E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B08B82D2213971BC00AC4E98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B08B82D5213971BC00AC4E98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B08B82D7213971BC00AC4E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B08B82E7213971BD00AC4E98 /* ButtonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ButtonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B08B82E7213971BD00AC4E98 /* MyButtonsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyButtonsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B08B82EB213971BD00AC4E98 /* ButtonsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonsUITests.swift; sourceTree = "<group>"; };
 		B08B82ED213971BD00AC4E98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,8 +68,8 @@
 		B08B82C9213971B900AC4E98 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B08B82C8213971B900AC4E98 /* Buttons.app */,
-				B08B82E7213971BD00AC4E98 /* ButtonsUITests.xctest */,
+				B08B82C8213971B900AC4E98 /* MyButtons.app */,
+				B08B82E7213971BD00AC4E98 /* MyButtonsUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -99,9 +99,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B08B82C7213971B900AC4E98 /* Buttons */ = {
+		B08B82C7213971B900AC4E98 /* MyButtons */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B08B82F0213971BD00AC4E98 /* Build configuration list for PBXNativeTarget "Buttons" */;
+			buildConfigurationList = B08B82F0213971BD00AC4E98 /* Build configuration list for PBXNativeTarget "MyButtons" */;
 			buildPhases = (
 				B08B82C4213971B900AC4E98 /* Sources */,
 				B08B82C5213971B900AC4E98 /* Frameworks */,
@@ -111,14 +111,14 @@
 			);
 			dependencies = (
 			);
-			name = Buttons;
+			name = MyButtons;
 			productName = Buttons;
-			productReference = B08B82C8213971B900AC4E98 /* Buttons.app */;
+			productReference = B08B82C8213971B900AC4E98 /* MyButtons.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B08B82E6213971BD00AC4E98 /* ButtonsUITests */ = {
+		B08B82E6213971BD00AC4E98 /* MyButtonsUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B08B82F6213971BD00AC4E98 /* Build configuration list for PBXNativeTarget "ButtonsUITests" */;
+			buildConfigurationList = B08B82F6213971BD00AC4E98 /* Build configuration list for PBXNativeTarget "MyButtonsUITests" */;
 			buildPhases = (
 				B08B82E3213971BD00AC4E98 /* Sources */,
 				B08B82E4213971BD00AC4E98 /* Frameworks */,
@@ -129,9 +129,9 @@
 			dependencies = (
 				B08B82E9213971BD00AC4E98 /* PBXTargetDependency */,
 			);
-			name = ButtonsUITests;
+			name = MyButtonsUITests;
 			productName = ButtonsUITests;
-			productReference = B08B82E7213971BD00AC4E98 /* ButtonsUITests.xctest */;
+			productReference = B08B82E7213971BD00AC4E98 /* MyButtonsUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -153,7 +153,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B08B82C3213971B900AC4E98 /* Build configuration list for PBXProject "Buttons" */;
+			buildConfigurationList = B08B82C3213971B900AC4E98 /* Build configuration list for PBXProject "MyButtons" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -166,8 +166,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B08B82C7213971B900AC4E98 /* Buttons */,
-				B08B82E6213971BD00AC4E98 /* ButtonsUITests */,
+				B08B82C7213971B900AC4E98 /* MyButtons */,
+				B08B82E6213971BD00AC4E98 /* MyButtonsUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -215,7 +215,7 @@
 /* Begin PBXTargetDependency section */
 		B08B82E9213971BD00AC4E98 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B08B82C7213971B900AC4E98 /* Buttons */;
+			target = B08B82C7213971B900AC4E98 /* MyButtons */;
 			targetProxy = B08B82E8213971BD00AC4E98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -443,7 +443,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B08B82C3213971B900AC4E98 /* Build configuration list for PBXProject "Buttons" */ = {
+		B08B82C3213971B900AC4E98 /* Build configuration list for PBXProject "MyButtons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B08B82EE213971BD00AC4E98 /* Debug */,
@@ -452,7 +452,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B08B82F0213971BD00AC4E98 /* Build configuration list for PBXNativeTarget "Buttons" */ = {
+		B08B82F0213971BD00AC4E98 /* Build configuration list for PBXNativeTarget "MyButtons" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B08B82F1213971BD00AC4E98 /* Debug */,
@@ -461,7 +461,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B08B82F6213971BD00AC4E98 /* Build configuration list for PBXNativeTarget "ButtonsUITests" */ = {
+		B08B82F6213971BD00AC4E98 /* Build configuration list for PBXNativeTarget "MyButtonsUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B08B82F7213971BD00AC4E98 /* Debug */,

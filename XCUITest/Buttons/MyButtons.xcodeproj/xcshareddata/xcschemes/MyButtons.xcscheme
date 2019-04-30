@@ -15,9 +15,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B08B82C7213971B900AC4E98"
-               BuildableName = "Buttons.app"
-               BlueprintName = "Buttons"
-               ReferencedContainer = "container:Buttons.xcodeproj">
+               BuildableName = "MyButtons.app"
+               BlueprintName = "MyButtons"
+               ReferencedContainer = "container:MyButtons.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -33,9 +33,9 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B08B82E6213971BD00AC4E98"
-               BuildableName = "ButtonsUITests.xctest"
-               BlueprintName = "ButtonsUITests"
-               ReferencedContainer = "container:Buttons.xcodeproj">
+               BuildableName = "MyButtonsUITests.xctest"
+               BlueprintName = "MyButtonsUITests"
+               ReferencedContainer = "container:MyButtons.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -43,9 +43,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B08B82C7213971B900AC4E98"
-            BuildableName = "Buttons.app"
-            BlueprintName = "Buttons"
-            ReferencedContainer = "container:Buttons.xcodeproj">
+            BuildableName = "MyButtons.app"
+            BlueprintName = "MyButtons"
+            ReferencedContainer = "container:MyButtons.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -66,9 +66,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B08B82C7213971B900AC4E98"
-            BuildableName = "Buttons.app"
-            BlueprintName = "Buttons"
-            ReferencedContainer = "container:Buttons.xcodeproj">
+            BuildableName = "MyButtons.app"
+            BlueprintName = "MyButtons"
+            ReferencedContainer = "container:MyButtons.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -85,9 +85,9 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B08B82C7213971B900AC4E98"
-            BuildableName = "Buttons.app"
-            BlueprintName = "Buttons"
-            ReferencedContainer = "container:Buttons.xcodeproj">
+            BuildableName = "MyButtons.app"
+            BlueprintName = "MyButtons"
+            ReferencedContainer = "container:MyButtons.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
