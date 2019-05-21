@@ -6,7 +6,7 @@ namespace UITestDemo
 {
     public class MainPage : TabbedPage
     {
-        public MainPage()
+        public MainPage(bool runningInAppCenter)
         {
             Page itemsPage, aboutPage = null;
 
@@ -41,7 +41,14 @@ namespace UITestDemo
             Children.Add(itemsPage);
             Children.Add(aboutPage);
 
-            Title = Children[0].Title;
+            if (runningInAppCenter)
+            {
+                Title = "Running in App Center!";
+            }
+            else
+            {
+                Title = "Running locally!";
+            }
         }
 
         protected override void OnCurrentPageChanged()

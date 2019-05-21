@@ -7,6 +7,7 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using Com.Microsoft.Appcenter.Utils;
 
 namespace UITestDemo.Droid
 {
@@ -22,12 +23,35 @@ namespace UITestDemo.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
-            LoadApplication(new App());
+            LoadApplication(new App(RunningInAppCenter()));
         }
 
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
         {
             base.OnActivityResult(requestCode, resultCode, data);
+        }
+
+        private bool RunningInAppCenter()
+        {
+            try
+            {
+                var arguments = InstrumentationRegistryHelper.Arguments;
+                var runningInAppCenter = arguments.GetString("RUNNING_IN_APP_CENTER");
+                if (runningInAppCenter == null || runningInAppCenter != "1")
+                {
+                    return false;
+                }
+
+                return true;
+            }
+            catch (Java.Lang.LinkageError)
+            {
+                return false;
+            }
+            catch (Java.Lang.IllegalStateException)
+            {
+                return false;
+            }
         }
     }
 }

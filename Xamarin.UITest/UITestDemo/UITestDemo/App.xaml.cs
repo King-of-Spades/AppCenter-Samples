@@ -9,7 +9,7 @@ namespace UITestDemo
         public static bool UseMockDataStore = true;
         public static string BackendUrl = "https://localhost:5000";
 
-        public App()
+        public App(bool runningInAppCenter)
         {
             InitializeComponent();
 
@@ -19,9 +19,9 @@ namespace UITestDemo
                 DependencyService.Register<CloudDataStore>();
 
             if (Device.RuntimePlatform == Device.iOS)
-                MainPage = new MainPage();
+                MainPage = new MainPage(runningInAppCenter);
             else
-                MainPage = new NavigationPage(new MainPage());
+                MainPage = new NavigationPage(new MainPage(runningInAppCenter));
         }
     }
 }

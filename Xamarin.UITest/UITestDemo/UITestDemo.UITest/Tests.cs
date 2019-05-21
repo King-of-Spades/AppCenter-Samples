@@ -32,6 +32,13 @@ namespace UITestDemo.UITest
         }
 
         [Test]
+        public void AppEnvironment()
+        {
+            app.Screenshot("First screen.");
+            app.WaitForElement(x => x.Text("Running in App Center!"));
+        }
+
+        [Test]
         public void ClearTextDemo()
         {
             app.Tap(x => x.Marked("Add"));
