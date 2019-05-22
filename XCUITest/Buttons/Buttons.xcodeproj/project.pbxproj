@@ -1,4 +1,5 @@
 // !$*UTF8*$!
+// Just an experiment for GitHub handling experiments
 {
 	archiveVersion = 1;
 	classes = {
