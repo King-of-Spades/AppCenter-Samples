@@ -1,6 +1,6 @@
 # Build Status Badge
-Android: [![Build status](https://build.appcenter.ms/v0.1/apps/67b70b47-a923-4864-bc05-170020d0eefe/branches/master/badge)](https://appcenter.ms)
-iOS Simulator: [![Build status](https://build.appcenter.ms/v0.1/apps/a32536d6-a435-4895-9874-50a9282d3336/branches/master/badge)](https://appcenter.ms)
+- Android: [![Build status](https://build.appcenter.ms/v0.1/apps/67b70b47-a923-4864-bc05-170020d0eefe/branches/master/badge)](https://appcenter.ms)
+- iOS Simulator: [![Build status](https://build.appcenter.ms/v0.1/apps/a32536d6-a435-4895-9874-50a9282d3336/branches/master/badge)](https://appcenter.ms)
 
 
 FormsGallery Xamarin.UITest sample
