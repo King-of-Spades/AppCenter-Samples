@@ -4,6 +4,8 @@
 
 # Custom Environment Variables
 # $API_KEY
+# $TEAM_APP
+# $DEVICE_SET
 UITEST_PATH='Xamarin.UITest/UITestDemo/UITestDemo.UITest'
 
 # DEBUGGING
@@ -25,7 +27,7 @@ eval MSBuild $APPCENTER_SOURCE_DIRECTORY/$UITEST_PATH -v:q
 # ls $APPCENTER_SOURCE_DIRECTORY/Xamarin.UITest/UITestDemo/UITestDemo.UITest
 
 # Upload tests
-App_Center_Test_Command='appcenter test run uitest --app "XTCTeam/UITestDemo-1" --devices "XTCTeam/galaxy-s9-and-google-pixels-android-7-dot-1-2-9-dot-0" --app-path $APPCENTER_OUTPUT_DIRECTORY/com.companyname.UITestDemo.apk  --test-series "master" --locale "en_US" --build-dir $APPCENTER_SOURCE_DIRECTORY/$UITEST_PATH/bin/Debug --async --token $API_KEY --uitest-tools-dir $APPCENTER_SOURCE_DIRECTORY/Xamarin.UITest/UITestDemo/packages/Xamarin.UITest.*/tools'
+App_Center_Test_Command='appcenter test run uitest --app $TEAM_APP --devices $DEVICE_SET --app-path $APPCENTER_OUTPUT_DIRECTORY/com.companyname.UITestDemo.apk  --test-series "build-tests" --locale "en_US" --build-dir $APPCENTER_SOURCE_DIRECTORY/$UITEST_PATH/bin/Debug --async --token $API_KEY --uitest-tools-dir $APPCENTER_SOURCE_DIRECTORY/Xamarin.UITest/UITestDemo/packages/Xamarin.UITest.*/tools'
 
 echo $App_Center_Test_Command
 eval $App_Center_Test_Command
