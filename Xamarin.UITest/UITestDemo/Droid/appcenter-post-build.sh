@@ -6,9 +6,20 @@ echo "I run at the end of your build."
 echo "Documentation: https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/#post-clone"
 
 echo "Attempting to upload & run test suite using source directory: " $APPCENTER_SOURCE_DIRECTORY
+echo "Contents: "
+ls $APPCENTER_SOURCE_DIRECTORY
+
 echo "& output directory: " $APPCENTER_OUTPUT_DIRECTORY
+echo "Contents: "
+ls $APPCENTER_OUTPUT_DIRECTORY
+
+echo "contents of UITest directory:" 
+ls $APPCENTER_SOURCE_DIRECTORY/Xamarin.UITest/UITestDemo/UITestDemo.UITest
 
 echo $App_Center_Test_Command
 App_Center_Test_Command=${App_Center_Test_Command/'API_KEY'/$API_KEY}
-eval $App_Center_Test_Command
+# eval $App_Center_Test_Command
+
+
+
 echo "end post-build script"
