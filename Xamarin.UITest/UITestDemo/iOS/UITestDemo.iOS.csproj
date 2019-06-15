@@ -109,6 +109,49 @@
     <Reference Include="Xamarin.Forms.Xaml">
       <HintPath>..\packages\Xamarin.Forms.4.0.0.425677\lib\Xamarin.iOS10\Xamarin.Forms.Xaml.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Common.Logging.Core">
+      <HintPath>..\packages\Common.Logging.Core.3.4.1\lib\netstandard1.0\Common.Logging.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="BouncyCastle.Crypto">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.1.3\lib\netstandard2.0\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.DotNet.PlatformAbstractions">
+      <HintPath>..\packages\Microsoft.DotNet.PlatformAbstractions.1.1.0\lib\netstandard1.3\Microsoft.DotNet.PlatformAbstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyModel">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyModel.1.1.0\lib\netstandard1.6\Microsoft.Extensions.DependencyModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging">
+      <HintPath>..\packages\Common.Logging.3.4.1\lib\netstandard1.3\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.barcodes">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.barcodes.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.forms">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.forms.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.io">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.io.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.kernel">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.kernel.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.layout">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.layout.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.pdfa">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.pdfa.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.sign">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.sign.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.styledxmlparser">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.styledxmlparser.dll</HintPath>
+    </Reference>
+    <Reference Include="itext.svg">
+      <HintPath>..\packages\itext7.7.1.6\lib\netstandard1.6\itext.svg.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
