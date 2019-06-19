@@ -62,7 +62,7 @@ This blog also details most of the steps required, though a few details are out 
 **To build apps in App Center, you must own the repository you wish to build from. For example, to use the samples in this repo, you have to fork this repository.**
 
 ## Integrating Test Suite on Android
-If you have the build working on it's own in App Center Build, then there just a few more steps to enable Test support. These steps are handled by the script called [appcenter-post-build.sh](droid/appcenter-post-build.sh) in the "Droid" project folder. 
+If you have the build working on it's own in App Center Build, then there just a few more steps to enable Test support. These steps are handled by the script called [appcenter-post-build.sh](Droid/appcenter-post-build.sh) in the "Droid" project folder. 
 
 1. For this example, Add the Custom Environment Varaibles to your build settings in App Center:
    - `$API_KEY` - You can use an existing API key or generate a new one (https://intercom.help/appcenter/articles/1841885-how-to-use-app-center-s-api)
