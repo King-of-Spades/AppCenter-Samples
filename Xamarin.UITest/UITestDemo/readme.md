@@ -78,9 +78,9 @@ To use this script note the following:
 - It's important to build the Xamarin.UITest project in the command line; as that is not handled automatically as part of the Android app project build. This is handled by the `MSBuild` command in the script.
 
 - Your App Center upload command will require a few extra arguments compared to a typical upload:
-   `--aync` - This prevents your build from waiting for the test results and timing out. 
-   `--token` - Setting an API token since the Cloud Build machine is not logged in to your App Center identity. 
-   `--uitest-tools-dir` - Explicitly pointing to the Xamarin.UITest package tools folder. (Usually in a local system this is found automatically.)   
+   - `--aync` - This prevents your build from waiting for the test results and timing out. 
+   - `--token` - Setting an API token since the Cloud Build machine is not logged in to your App Center identity. 
+   - `--uitest-tools-dir` - Explicitly pointing to the Xamarin.UITest package tools folder. (Usually in a local system this is found automatically.)   
 
 - There are 3 types of environment variables used to help the script:
    1. Variables created by App Center, which can be accessed directly by your script. These variables behave similarly to variables set universally on a local system. (Documentation: https://docs.microsoft.com/en-us/appcenter/build/custom/scripts/#app-center-variables)
