@@ -1,0 +1,3 @@
+[submodule "Xamarin.UITest/UITestDemo/Droid/submodule_experiment"]
+	path = Xamarin.UITest/UITestDemo/Droid/submodule_experiment
+	url = https://github.com/King-of-Spades/submodule_experiment
