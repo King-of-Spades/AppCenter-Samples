@@ -7,7 +7,7 @@
 	<key>CFBundleName</key>
 	<string>UITestDemo</string>
 	<key>CFBundleIdentifier</key>
-	<string>com.companyname.UITestDemo</string>
+	<string>com.appcenter.UITestDemo</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
