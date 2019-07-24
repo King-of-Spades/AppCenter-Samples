@@ -30,7 +30,7 @@ namespace FormsGallery.CodeExamples
 
             Map map = new Map();
 
-            Position position = new Position();
+            //Position position = new Position();
 
             // Let's visit Xamarin HQ in San Francisco!
             //Position position = new Position(37.79762, -122.40181);
