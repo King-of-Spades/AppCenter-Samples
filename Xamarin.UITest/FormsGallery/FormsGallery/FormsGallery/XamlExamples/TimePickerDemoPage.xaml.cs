@@ -8,10 +8,10 @@ namespace FormsGallery.XamlExamples
         public TimePickerDemoPage()
         {
             InitializeComponent();
-            TimeSpan SelectedTime;
-#if DEBUG
-            SelectedTime = new TimeSpan(8, 0, 0);
-#endif
+            //TimeSpan SelectedTime;
+//#if DEBUG
+            //SelectedTime = new TimeSpan(8, 0, 0);
+//#endif
         }
     }
 }
