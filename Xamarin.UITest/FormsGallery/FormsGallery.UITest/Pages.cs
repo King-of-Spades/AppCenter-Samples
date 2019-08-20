@@ -17,6 +17,7 @@ namespace FormsGallery.UITest
             this.platform = platform;
         }
 
+        [Category("ContentPage")]
         [Test]
         public void ContentPage()
         {

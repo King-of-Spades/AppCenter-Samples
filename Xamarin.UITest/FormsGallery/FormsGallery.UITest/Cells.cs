@@ -8,6 +8,7 @@ using Xamarin.UITest.Queries;
 
 namespace FormsGallery.UITest
 {
+    [Category("AllCells")]
     [TestFixture(Platform.Android)]
     [TestFixture(Platform.iOS)]
     public class Cells : HelperMethods
