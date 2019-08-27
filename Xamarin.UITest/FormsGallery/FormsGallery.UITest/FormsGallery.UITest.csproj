@@ -46,6 +46,7 @@
     <Compile Include="Cells.cs" />
     <Compile Include="Pages.cs" />
     <Compile Include="LayoutsWithSingleContent.cs" />
+    <Compile Include="ResourceLoader.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
