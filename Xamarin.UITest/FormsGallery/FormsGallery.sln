@@ -13,6 +13,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "FormsGallery.Shared", "Form
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormsGallery.UITest", "FormsGallery.UITest\FormsGallery.UITest.csproj", "{6B714118-62C0-4E7F-A3A3-148B9C29ED76}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Files", "External Files", "{C08601EE-B7D8-4637-99E2-658FEC5EF61C}"
+	ProjectSection(SolutionItems) = preProject
+		android.sh = android.sh
+		includedDataFile.txt = includedDataFile.txt
+		ios.sh = ios.sh
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
 		FormsGallery\FormsGallery.Shared\FormsGallery.Shared.projitems*{29ae58f7-406f-4d66-bbec-2bcf05dc1d8d}*SharedItemsImports = 4
