@@ -1,1 +1,4 @@
-﻿
+﻿This is an embedded datafile, thanks for reading!
+This is line 2 of the embedded datafile
+This is line 3 of the embedded datafile
+This is line 4 of the embedded datafile

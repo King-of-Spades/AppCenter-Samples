@@ -1,1 +1,4 @@
-﻿
+﻿This is an included datafile, thanks for reading!
+This is line 2 of the included datafile
+This is line 3 of the included datafile
+This is line 4 of the included datafile
