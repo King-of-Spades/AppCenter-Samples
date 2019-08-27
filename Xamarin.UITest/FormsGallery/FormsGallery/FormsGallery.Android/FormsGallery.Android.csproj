@@ -212,6 +212,15 @@
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="packages.config" />
+    <None Include="appcenter-post-build.sh">
+      <Link>Build Scripts\appcenter-post-build.sh</Link>
+    </None>
+    <None Include="appcenter-post-clone.sh">
+      <Link>Build Scripts\appcenter-post-clone.sh</Link>
+    </None>
+    <None Include="appcenter-pre-build.sh">
+      <Link>Build Scripts\appcenter-pre-build.sh</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon.png" />
@@ -239,6 +248,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\xaml.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Build Scripts\" />
   </ItemGroup>
   <Import Project="..\FormsGallery.Shared\FormsGallery.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />

@@ -102,6 +102,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
     <ITunesArtwork Include="iTunesArtwork@2x" />
+    <None Include="appcenter-post-build.sh">
+      <Link>Build Scripts\appcenter-post-build.sh</Link>
+    </None>
+    <None Include="appcenter-post-clone.sh">
+      <Link>Build Scripts\appcenter-post-clone.sh</Link>
+    </None>
+    <None Include="appcenter-pre-build.sh">
+      <Link>Build Scripts\appcenter-pre-build.sh</Link>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -151,6 +160,9 @@
     <PackageReference Include="Xamarin.TestCloud.Agent">
       <Version>0.21.8</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Build Scripts\" />
   </ItemGroup>
   <Import Project="..\FormsGallery.Shared\FormsGallery.Shared.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
