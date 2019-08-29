@@ -47,12 +47,12 @@
     <Compile Include="Pages.cs" />
     <Compile Include="LayoutsWithSingleContent.cs" />
     <Compile Include="ResourceLoader.cs" />
-    <Compile Include="includedDataFile.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
-    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+    <None Include="includedDataFile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\FormsGallery\FormsGallery.Android\FormsGallery.Android.csproj">
