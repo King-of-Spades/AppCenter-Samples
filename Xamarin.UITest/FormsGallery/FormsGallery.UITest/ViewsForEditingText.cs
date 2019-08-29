@@ -2,6 +2,7 @@
 using System.IO;
 using System.Linq;
 using System.Threading;
+using EmbeddedResources;
 using NUnit.Framework;
 using Xamarin.UITest;
 using Xamarin.UITest.Queries;
@@ -52,7 +53,6 @@ namespace FormsGallery.UITest
             for (int i = 0; i <= 1; i++)
             {
                 OpenPage("Editor (multiple lines)", i);
-                //app.Repl();
                 app.EnterText("EditorElement",
                     "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
                     "Fusce hendrerit vulputate lacinia. " +
@@ -60,6 +60,57 @@ namespace FormsGallery.UITest
                     "Vestibulum et turpis in orci condimentum laoreet in quis metus. " +
                     "Praesent quis mattis odio."
                     );
+                app.Screenshot("entered text in editor");
+                app.DismissKeyboard();
+                app.Screenshot("keyboard dismissed");
+                app.Back();
+                if (platform == Platform.Android)
+                {
+                    app.Back(); // needed because first .Back call just deselects field
+                }
+            }
+        }
+
+        [Test]
+        public void EditorEmbeddedFile()
+        {
+            for (int i = 0; i <= 1; i++)
+            {
+                OpenPage("Editor (multiple lines)", i);
+
+                // Read the text file line by line
+                StreamReader stream = new StreamReader(ResourceLoader.GetEmbeddedResourceStream("embeddedDataFile.txt"));
+                String line1 = stream.ReadLine();
+                String line2 = stream.ReadLine();
+                String line3 = stream.ReadLine();
+
+                app.EnterText("EditorElement", line1 + line2 + line3);
+                app.Screenshot("entered text in editor");
+                app.DismissKeyboard();
+                app.Screenshot("keyboard dismissed");
+                app.Back();
+                if (platform == Platform.Android)
+                {
+                    app.Back(); // needed because first .Back call just deselects field
+                }
+            }
+        }
+
+
+        [Test]
+        public void EditorIncludedFile()
+        {
+            for (int i = 0; i <= 1; i++)
+            {
+                OpenPage("Editor (multiple lines)", i);
+
+                // Read the text file line by line
+                StreamReader stream = new StreamReader("./includedDataFile.txt");
+                String line1 = stream.ReadLine();
+                String line2 = stream.ReadLine();
+                String line3 = stream.ReadLine();
+
+                app.EnterText("EditorElement", line1 + line2 + line3);
                 app.Screenshot("entered text in editor");
                 app.DismissKeyboard();
                 app.Screenshot("keyboard dismissed");
