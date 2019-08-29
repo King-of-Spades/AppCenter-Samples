@@ -16,7 +16,6 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "External Files", "External Files", "{C08601EE-B7D8-4637-99E2-658FEC5EF61C}"
 	ProjectSection(SolutionItems) = preProject
 		android.sh = android.sh
-		includedDataFile.txt = includedDataFile.txt
 		ios.sh = ios.sh
 	EndProjectSection
 EndProject
