@@ -50,8 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
-    <None Include="includedDataFile.txt">
-      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    <None Include="..\includedDataFile.txt">
+      <Link>includedDataFile.txt</Link>
     </None>
   </ItemGroup>
   <ItemGroup>
