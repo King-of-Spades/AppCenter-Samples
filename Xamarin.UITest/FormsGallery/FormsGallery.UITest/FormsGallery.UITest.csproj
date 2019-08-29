@@ -47,6 +47,9 @@
     <Compile Include="Pages.cs" />
     <Compile Include="LayoutsWithSingleContent.cs" />
     <Compile Include="ResourceLoader.cs" />
+    <Compile Include="includedDataFile.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
