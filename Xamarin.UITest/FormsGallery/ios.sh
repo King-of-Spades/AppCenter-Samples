@@ -4,10 +4,10 @@
 AppCenter_Test_Command='paste upload command here'
 
 # Step 2 Provide the (absolute or relative) path to the IPA
-app_path='precompiledApps/UITestDemo.ipa'
+app_path='precompiledApps/FormsGallery.ipa'
 
 # Step 3 Provide the (absolute or relative) path to the UITest project bin folder
-build_dir='UITestDemo.UITest/bin/Debug'
+build_dir='FormsGallery.UITest/bin/Debug'
 
 # Step 4 run using the command "sh ios.sh"
 
