@@ -1,3 +1,7 @@
 .DS_Store
 Resource.Designer.cs
 .vs
+Espresso/Swiftnotes/app/release/app-release.apk
+Espresso/Swiftnotes/app/debug/app-debug.apk
+Espresso/Swiftnotes/app/debug/output.json
+Espresso/Swiftnotes/app/release/output.json
