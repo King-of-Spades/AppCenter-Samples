@@ -1,8 +1,8 @@
 # Building & running tests locally
 ## Building
 Steps on how to build Swiftnotes:
-1. Make sure you have Android Studio with _at minimum_ Gradle v4.1 and Android SDK Tools (26.1.1 Build tools)
-2. Open the project using *Android Studio > File > Import Project*
+1. Make sure you have Android Studio with _at minimum_ Gradle v4.1 and Android SDK Tools (26.1.1 Build tools).
+2. Open the project using *Android Studio > File > Open*
 3. Select *build.gradle* in Swiftnotes. (Picking another directory may still seem to open the project, but cause trouble building.)
 4. Go to *File > Project Structure > SDK Location* and make sure Android SDK and JDK paths are set.
 5. Select *Build > Rebuild Project*
