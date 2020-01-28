@@ -15,6 +15,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "upload scripts", "upload sc
 		android.sh = android.sh
 		ios.sh = ios.sh
 	EndProjectSection
+	
+BREAK BREAK BREAK THIS AS AN EXPERIMENT	
+	
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
