@@ -1,6 +1,3 @@
-# App Center Samples (besides Test)
-(Coming soon)
-
 # App Center Test samples
 These samples are preconstructed to demonstrate how each test framework included can be used along with a demo app in App Center Test.
 
