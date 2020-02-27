@@ -19,7 +19,7 @@ namespace UITestDemo.Droid
             ToolbarResource = Resource.Layout.Toolbar;
 
             base.OnCreate(bundle);
-
+//delete this comment, the comment is ane experiment. The rest of the code is fine.
             global::Xamarin.Forms.Forms.Init(this, bundle);
 
             LoadApplication(new App());
