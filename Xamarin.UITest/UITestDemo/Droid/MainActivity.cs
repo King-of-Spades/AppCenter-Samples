@@ -17,7 +17,7 @@ namespace UITestDemo.Droid
         {
             TabLayoutResource = Resource.Layout.Tabbar;
             ToolbarResource = Resource.Layout.Toolbar;
-
+// Delete this comment, it was an experiment to trigger an auto build. Only the comment, nothing else. 
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
