@@ -1,7 +1,7 @@
 # App Center Test samples
 These samples are preconstructed to demonstrate how each test framework included can be used along with a demo app in App Center Test.
 
-Primary documentation for App Center Test is available here: https://docs.microsoft.com/en-us/appcenter/test-cloud/
+Primary documentation for App Center Test is available here: https://docs.microsoft.com/en-us/appcenter/test-cloud/.
 
 # Upload commands
 No matter which test framework you are using, to run UI Tests in App Center, you **must** generate a prototype upload commandline in one of the systems using the wizard. This command line requires modifications in order to be executed, which the test framework-specific upload scripts demonstrate for basic usage. 
