@@ -28,7 +28,7 @@ These samples include the App specific steps documented here: https://docs.micro
 - [Appium iOS Sample](Appium/iOS) This sample includes IPA & app files and a pre-written Appium test suite prepared for running in AppCenter/Test.
 
 ## Xamarin.UITest
-This sample includes the App Center Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/preparing-for-upload/uitest
+This sample includes the App Center Test specific steps documented here: https://docs.microsoft.com/en-us/appcenter/test-cloud/uitest/
 
 - [Xamarin.UITest Android & iOS sample](Xamarin.UITest/UITestDemo) This Xamarin.Forms sample app is compatible with both iOS & Android; and includes a Xamarin.UITest project for the actual tests. 
 
