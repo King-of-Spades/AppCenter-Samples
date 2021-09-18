@@ -1,3 +1,6 @@
+# Community maintainer applications welcome
+I'm no longer heavily involved in maintaining this, but am willing to hand over this to community if people are still using it in some way. File an issue if you're interested in doing so. 
+
 # App Center Test samples
 These samples are preconstructed to demonstrate how each test framework included can be used along with a demo app in App Center Test.
 
